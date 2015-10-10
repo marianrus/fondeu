@@ -30,3 +30,8 @@ Route::get('dashboard','DashboardController@index');
 Route::get('auth/login','Auth\AuthController@getLogin');
 Route::post('auth/login' ,'Auth\AuthController@postLogin');
 Route::get('auth/logout','Auth\AuthController@getLogout');
+
+Route::get('articles-admin','ArticlesAdminController@index');
+Route::get('category-admin','CategoryAdminController@index');
+Route::get('eu-projects-admin','EuProjectsAdminController@index');
+Route::get('partners-admin','PartnersAdminController@index');

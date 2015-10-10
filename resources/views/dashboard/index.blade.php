@@ -1,5 +1,10 @@
 @extends('layouts.admin')
 
-@section('content')
-    This is the user section
+@section('title')
+    Dashboard
 @stop
+
+@section('content')
+    {{$name}}
+@stop
+
