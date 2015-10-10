@@ -5,6 +5,6 @@
 @stop
 
 @section('content')
-    {{$name}}
+
 @stop
 

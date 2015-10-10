@@ -18,6 +18,5 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="{{ URL::asset('js/Dashboard/sb-admin-2.js') }}"></script>
-<h5>This is my footer</h5>
 </body>
 </html>

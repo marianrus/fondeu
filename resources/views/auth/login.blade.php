@@ -1,22 +1,38 @@
+@include('layouts.admin-header');
 
-<form method="post" action="/auth/login">
-    {!! csrf_field() !!}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="login-panel panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Please Sign In</h3>
+                </div>
+                <div class="panel-body">
 
-    <div>
-        Username
-        <input type="text" name="username" id="username">
+
+                    <form method="post" action="/auth/login">
+                        {!! csrf_field() !!}
+
+                        <fieldset>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Username" type="text" name="username" id="username" autofocus>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Password" name="password" type="password">
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="remember" value="Remember Me">Remember me
+                                </label>
+                            </div>
+                            <!-- Change this to a button or input when using this as a form -->
+                            <input type="submit" class="btn btn-lg btn-success btn-block">Login</a>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-        Password
-        <input type="password" name="password" id="password">
-    </div>
+</div>
 
-    <div>
-        <input type="checkbox" name="remember">Remember me
-    </div>
-
-    <div>
-        <button type="submit">Login</button>
-    </div>
-</form>
-
+@include('layouts.admin-footer');
