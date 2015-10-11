@@ -32,6 +32,10 @@ Route::post('auth/login' ,'Auth\AuthController@postLogin');
 Route::get('auth/logout','Auth\AuthController@getLogout');
 
 Route::get('articles-admin','ArticlesAdminController@index');
+Route::get('articles-admin-form','ArticlesAdminController@getForm');
+Route::post('articles-admin-form','ArticlesAdminController@create');
+
+
 Route::get('category-admin','CategoryAdminController@index');
 Route::get('eu-projects-admin','EuProjectsAdminController@index');
 Route::get('partners-admin','PartnersAdminController@index');

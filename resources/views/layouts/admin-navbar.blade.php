@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+    <a class="navbar-brand" href="index.html">Fonduri Europene</a>
 </div>
 <!-- /.navbar-header -->
 
@@ -261,6 +261,20 @@
             <li>
                 <a href="/articles-admin"><i class="fa fa-newspaper-o fa-fw"></i> Articole</a>
             </li>
+
+<!--            <li>-->
+                <!--                <a href="/articles-admin"><i class="fa fa-newspaper-o fa-fw"></i> Articole<span class="fa arrow"></span></a>-->
+                <!--                <ul class="nav nav-second-level">-->
+                <!--                    <li>-->
+                <!--                        <a href="/articles-admin-form">Adauga un articol</a>-->
+                <!--                    </li>-->
+                <!--                    <li>-->
+                <!--                        <a href="morris.html">Morris.js Charts</a>-->
+                <!--                    </li>-->
+                <!--                </ul>-->
+                <!--                <!-- /.nav-second-level -->
+                <!--            </li>-->
+
             <li>
                 <a href="/category-admin"><i class="fa fa-angellist fa-fw"></i> Categorii</a>
             </li>

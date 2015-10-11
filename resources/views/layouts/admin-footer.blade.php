@@ -14,7 +14,8 @@
 <script src="{{ URL::asset('js/Dashboard/raphael-min.js') }}"></script>
 <script src="{{ URL::asset('js/Dashboard/morris.min.js') }}"></script>
 
-
+<!--Tiny MCE-->
+<script src="{{ URL::asset('js/Dashboard/tinymce/tinymce.min.js') }}"></script>
 
 <!-- Custom Theme JavaScript -->
 <script src="{{ URL::asset('js/Dashboard/sb-admin-2.js') }}"></script>

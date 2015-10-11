@@ -17,12 +17,17 @@ class Articles extends Migration
             $table->string('article_name');
             $table->text('article_description');
 
-            $table->integer('article_picture_id')->unsigned();
+            $table->integer('article_picture_id')->unsigned()->nullable();
             $table->foreign('article_picture_id')->references('article_picture_id')->on('article_pictures');
 
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('category_id')->on('category');
 
+            $table->integer('created_by')->unsigned();
+            $table->foreign('created_by')->references('id')->on('users');
+
+            $table->smallInteger('article_on_site')->default(0);
+            $table->smallInteger('article_on_facebook')->default(0);
             $table->timestamps();
         });
     }
