@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Administrare</title>
 
@@ -27,6 +28,11 @@
 
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="{{ URL::asset('fonts/font-awesome.min.css') }}"/>
+
+    <link rel="stylesheet" href="{{ URL::asset('css/Dashboard/dashboard.css') }}"/>
+    <link rel="stylesheet" href="{{ URL::asset('UILibrary/vex/css/vex.css') }}"/>
+    <link rel="stylesheet" href="{{ URL::asset('UILibrary/vex/css/vex-theme-flat-attack.css') }}"/>
+
 </head>
 <body>
 

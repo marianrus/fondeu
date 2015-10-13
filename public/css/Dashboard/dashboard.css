@@ -1,0 +1,9 @@
+
+.category-td{
+    cursor: pointer;
+}
+
+#category-save, #category-cancel{
+    display: none;
+    padding-right: 10px ;
+}
