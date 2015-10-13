@@ -37,5 +37,11 @@ Route::post('articles-admin-form','ArticlesAdminController@create');
 
 
 Route::get('category-admin','CategoryAdminController@index');
+Route::get('category-admin-createForm','CategoryAdminController@getCreateForm');
+Route::get('category-admin/{id}','CategoryAdminController@show');
+Route::put('category-admin/{id}','CategoryAdminController@update');
+Route::delete('category-admin/{id}','CategoryAdminController@destroy');
+Route::post('category-admin','CategoryAdminController@create');
+
 Route::get('eu-projects-admin','EuProjectsAdminController@index');
 Route::get('partners-admin','PartnersAdminController@index');

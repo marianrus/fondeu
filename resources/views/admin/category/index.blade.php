@@ -1,52 +1,56 @@
 @extends('layouts.admin')
 
 @section('title')
-    Categorii
-@stop
-<div class="row">
-<div class="col-lg-6">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            Hover Rows
-        </div>
-        <!-- /.panel-heading -->
-        <div class="panel-body">
-            <div class="table-responsive">
-                <table class="table table-hover">
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Username</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- /.table-responsive -->
-        </div>
-        <!-- /.panel-body -->
-    </div>
-    <!-- /.panel -->
+Categorii
+<div class="pull-right">
+    <a href="/category-admin-createForm"><button class="btn btn-primary btn-lg" type="button">Adauga</button></a>
 </div>
+@stop
+
+
+@section('content')
+<div class="col-lg-12">
+    <div class="row">
+        <div class="col-lg-9">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Categori Articole
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nume</th>
+                                <th>Descriere</th>
+                                <th>Creata la</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($category as $cat)
+                            <tr class="category-table-row" data-category-id="{{$cat->category_id}}">
+                                <td class="category-td category-id">{{$cat->category_id}}</td>
+                                <td class="category-td">{{$cat->category_name}}</td>
+                                <td class="category-td">{{$cat->category_description}}</td>
+                                <td class="category-td">2015-10-15</td>
+                                <td>
+                                    <button class="btn btn-danger category-delete">Sterge</button>
+                                </td>
+                            </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.table-responsive -->
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
     </div>
+</div>
+</div>
+@stop
