@@ -32,8 +32,11 @@ Route::post('auth/login' ,'Auth\AuthController@postLogin');
 Route::get('auth/logout','Auth\AuthController@getLogout');
 
 Route::get('articles-admin','ArticlesAdminController@index');
+Route::get('articles-admin/{id}','ArticlesAdminController@edit');
 Route::get('articles-admin-form','ArticlesAdminController@getForm');
 Route::post('articles-admin-form','ArticlesAdminController@create');
+Route::put('articles-admin-form/{id}','ArticlesAdminController@update');
+Route::delete('articles-admin/{id}','ArticlesAdminController@destroy');
 
 
 Route::get('category-admin','CategoryAdminController@index');
@@ -45,3 +48,5 @@ Route::post('category-admin','CategoryAdminController@create');
 
 Route::get('eu-projects-admin','EuProjectsAdminController@index');
 Route::get('partners-admin','PartnersAdminController@index');
+
+//http://www.johnpapa.net/toastr100beta/

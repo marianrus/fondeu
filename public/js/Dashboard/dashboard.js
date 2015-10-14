@@ -4,7 +4,12 @@ $(document).ready(function(){
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
+    $('#dataTables-example').DataTable({
+        responsive: true
+    });
+    App.Helper.formatArticleDescription();
 });
+
 
 $('.category-td').click(function(){
     var categoryId = $(this).parent().data('category-id');
@@ -52,6 +57,31 @@ $('.category-delete').click(function(){
         }
     });
 
-//    vex.dialog.confirm
-//    message: 'Are you absolutely sure you want to destroy the alien planet?'
 });
+
+function deleteArticle(articleId){
+    vex.dialog.confirm({
+        message: 'Esti sigur ca vrei sa stergi articolul?',
+        callback : function(value){
+            if(value){
+                $.ajax({
+                    url : '/articles-admin/'+ articleId,
+                    type : 'DELETE',
+                    dataType : 'json',
+                    success : function(data){
+                        vex.dialog.alert({
+                            message:'Articolul a fost stears cu success!!'
+                        });
+                        $('#article-'+articleId).remove();
+                    },
+                    error : function(data){
+                        vex.dialog.alert({
+                            message:'Categoria nu a putut fi stearsa deoarece exista articole care apartin categoriei!'
+                        })
+                    }
+                });
+            }
+        }
+    });
+
+}

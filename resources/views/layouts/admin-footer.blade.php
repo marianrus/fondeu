@@ -1,4 +1,3 @@
-{{ csrf_token() }}
 </div>
 <!-- /#wrapper -->
 
@@ -24,10 +23,14 @@
 <script src="{{ URL::asset('js/Dashboard/sb-admin-2.js') }}"></script>
 <!--Custom script for dashboard-->
 <script src="{{ URL::asset('js/Dashboard/dashboard.js') }}"></script>
+<script src="{{ URL::asset('js/Dashboard/app.js') }}"></script>
 
 
 <script src="{{ URL::asset('UILibrary/vex/js/vex.combined.min.js') }}"></script>
 <script>vex.defaultOptions.className = 'vex-theme-flat-attack';</script>
+
+<script src="{{ URL::asset('UILibrary/datatables/datatables/media/js/jquery.dataTables.min.js') }}"></script>
+<script src="{{ URL::asset('UILibrary/datatables/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js') }}"></script>
 
 </body>
 </html>
