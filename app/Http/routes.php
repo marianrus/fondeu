@@ -47,6 +47,12 @@ Route::delete('category-admin/{id}','CategoryAdminController@destroy');
 Route::post('category-admin','CategoryAdminController@create');
 
 Route::get('eu-projects-admin','EuProjectsAdminController@index');
+Route::get('eu-projects-createForm','EuProjectsAdminController@createForm');
+Route::post('eu-project-admin','EuProjectsAdminController@create');
+Route::delete('eu-project-admin/{id}','EuProjectsAdminController@destroy');
+
+
 Route::get('partners-admin','PartnersAdminController@index');
+
 
 //http://www.johnpapa.net/toastr100beta/

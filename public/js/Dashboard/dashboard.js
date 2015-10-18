@@ -8,6 +8,9 @@ $(document).ready(function(){
         responsive: true
     });
     App.Helper.formatArticleDescription('.article-description');
+
+    $('#project_start_at').datepicker();
+    $('#project_ends_at').datepicker();
 });
 
 
@@ -67,6 +70,28 @@ function deleteArticle(articleId){
                 function(){
                     App.Dialog.alert(
                         'Articolul nu a putu fi sters!'
+                    );
+                }
+            );
+        }
+    );
+}
+function projectDelete(projectId){
+    App.Dialog.confirm(
+        'Esti sigur ca vrei sa stergi Proiectul?',
+        function(){
+            App.Helper.ajaxCall(
+                '/eu-project-admin/'+ projectId,
+                'DELETE',
+                function(){
+                    App.Dialog.alert(
+                        'Proiectul a fost sters cu success!!',
+                        $('#project-'+projectId).remove()
+                    )
+                },
+                function(){
+                    App.Dialog.alert(
+                        'Proiectul nu a putut fi sters!'
                     );
                 }
             );
