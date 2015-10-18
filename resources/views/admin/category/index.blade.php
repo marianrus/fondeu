@@ -3,7 +3,9 @@
 @section('title')
 Categorii
 <div class="pull-right">
-    <a href="/category-admin-createForm"><button class="btn btn-primary btn-lg" type="button">Adauga</button></a>
+    <a href="/category-admin-createForm">
+        <button class="btn btn-primary btn-lg" type="button">Adauga</button>
+    </a>
 </div>
 @stop
 
@@ -31,24 +33,23 @@ Categorii
                             </thead>
                             <tbody>
                             @foreach($category as $cat)
-                            <tr class="category-table-row" data-category-id="{{$cat->category_id}}">
+                            <tr class="category-table-row" id="category-{{$cat->category_id}}">
                                 <td class="category-td category-id">{{$cat->category_id}}</td>
                                 <td class="category-td">{{$cat->category_name}}</td>
                                 <td class="category-td">{{$cat->category_description}}</td>
                                 <td class="category-td">2015-10-15</td>
                                 <td>
-                                    <button class="btn btn-danger category-delete">Sterge</button>
+                                    <button class="btn btn-danger" onclick="categoryDelete({{$cat->category_id}})">
+                                        Sterge
+                                    </button>
                                 </td>
                             </tr>
                             @endforeach
                             </tbody>
                         </table>
                     </div>
-                    <!-- /.table-responsive -->
                 </div>
-                <!-- /.panel-body -->
             </div>
-            <!-- /.panel -->
         </div>
     </div>
 </div>

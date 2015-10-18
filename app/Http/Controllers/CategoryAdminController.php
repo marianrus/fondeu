@@ -64,8 +64,7 @@ class CategoryAdminController extends BaseController
     {
         $category = Category::find($id);
         $category->delete();
-
-        return Redirect::to('category-admin');
+        return json_encode('success');
     }
 
     /**

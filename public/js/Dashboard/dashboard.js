@@ -7,7 +7,7 @@ $(document).ready(function(){
     $('#dataTables-example').DataTable({
         responsive: true
     });
-    App.Helper.formatArticleDescription();
+    App.Helper.formatArticleDescription('.article-description');
 });
 
 
@@ -32,56 +32,44 @@ $('#category-cancel').click(function(){
     $('#category-cancel').hide();
 });
 
-$('.category-delete').click(function(){
-    var categoryId = $(this).closest('tr').data('category-id');
-    vex.dialog.confirm({
-        message: 'Esti sigur ca vrei sa stergi categoria?',
-        callback : function(value){
-            if(value){
-                $.ajax({
-                   url : '/category-admin/'+ categoryId,
-                   type : 'DELETE',
-                    dataType : 'json',
-                   success : function(data){
-                       vex.dialog.alert({
-                           message:'Categoria a fost stearsa cu success!!'
-                       })
-                   },
-                    error : function(data){
-                       vex.dialog.alert({
-                           message:'Categoria nu a putut fi stearsa deoarece exista articole care apartin categoriei!'
-                       })
-                    }
-                });
-            }
-        }
-    });
+function categoryDelete(categoryId){
+    App.Dialog.confirm(
+        'Esti sigur ca vrei sa stergi categoria?',
+         function (){
+             App.Helper.ajaxCall(
+                 '/category-admin/'+ categoryId,
+                 'DELETE',
+                 function(){
+                     App.Dialog.alert('Categoria a fost stearsa cu success!!');
+                     $('#category-'+categoryId).remove();
 
-});
+                 },
+                 function(){
+                     App.Dialog.alert('Categoria nu a putut fi stearsa deoarece exista articole care apartin categoriei!');
+                 }
+         )}
+    );
+}
 
 function deleteArticle(articleId){
-    vex.dialog.confirm({
-        message: 'Esti sigur ca vrei sa stergi articolul?',
-        callback : function(value){
-            if(value){
-                $.ajax({
-                    url : '/articles-admin/'+ articleId,
-                    type : 'DELETE',
-                    dataType : 'json',
-                    success : function(data){
-                        vex.dialog.alert({
-                            message:'Articolul a fost stears cu success!!'
-                        });
-                        $('#article-'+articleId).remove();
-                    },
-                    error : function(data){
-                        vex.dialog.alert({
-                            message:'Categoria nu a putut fi stearsa deoarece exista articole care apartin categoriei!'
-                        })
-                    }
-                });
-            }
+    App.Dialog.confirm(
+        'Esti sigur ca vrei sa stergi articolul?',
+        function(){
+            App.Helper.ajaxCall(
+                '/articles-admin/'+ articleId,
+                'DELETE',
+                function(){
+                    App.Dialog.alert(
+                        'Articolul a fost stears cu success!!',
+                        $('#article-'+articleId).remove()
+                    )
+                },
+                function(){
+                    App.Dialog.alert(
+                        'Articolul nu a putu fi sters!'
+                    );
+                }
+            );
         }
-    });
-
+    );
 }
