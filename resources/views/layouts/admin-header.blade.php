@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="{{ URL::asset('css/Dashboard/dashboard.css') }}"/>
     <link rel="stylesheet" href="{{ URL::asset('UILibrary/vex/css/vex.css') }}"/>
     <link rel="stylesheet" href="{{ URL::asset('UILibrary/vex/css/vex-theme-flat-attack.css') }}"/>
-
+    <link rel="stylesheet" href="{{ URL::asset('UILibrary/datepicker/css/datepicker.css') }}"/>
 </head>
 <body>
 

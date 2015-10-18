@@ -32,5 +32,9 @@
 <script src="{{ URL::asset('UILibrary/datatables/datatables/media/js/jquery.dataTables.min.js') }}"></script>
 <script src="{{ URL::asset('UILibrary/datatables/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js') }}"></script>
 
+
+<script src="{{ URL::asset('UILibrary/datepicker/js/bootstrap-datepicker.js') }}"></script>
+
+
 </body>
 </html>
