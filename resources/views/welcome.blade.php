@@ -38,7 +38,8 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title"> <a href="/dashboard"><b>Panoul de Administrare</b></a>
+		</div>
             </div>
         </div>
     </body>
