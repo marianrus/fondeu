@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ArticlePictures extends Migration
+class Pictures extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,10 @@ class ArticlePictures extends Migration
      */
     public function up()
     {
-        Schema::create('article_pictures',function(Blueprint $table){
+        Schema::create('pictures',function(Blueprint $table){
 
-           $table->integer('article_picture_id')->unsigned()->unique();
-           $table->string('article_picture_path');
+           $table->integer('picture_id')->unsigned()->unique();
+           $table->string('picture_path');
         });
     }
 
@@ -26,8 +26,8 @@ class ArticlePictures extends Migration
      */
     public function down()
     {
-        if(Schema::hasTable('article_pictures')){
-            Schema::drop('article_pictures');
+        if(Schema::hasTable('pictures')){
+            Schema::drop('pictures');
         }
     }
 }

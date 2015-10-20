@@ -17,8 +17,8 @@ class Articles extends Migration
             $table->string('article_name');
             $table->text('article_description');
 
-            $table->integer('article_picture_id')->unsigned()->nullable();
-            $table->foreign('article_picture_id')->references('article_picture_id')->on('article_pictures');
+            $table->integer('picture_id')->unsigned()->nullable();
+            $table->foreign('picture_id')->references('picture_id')->on('pictures');
 
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('category_id')->on('category');
