@@ -3,9 +3,6 @@
 
 <!-- jQuery -->
 <script src="{{ URL::asset('js/Dashboard/jquery.min.js') }}"></script>
-<!--<script>-->
-<!--    $.ajaxSetup({ headers: { 'csrftoken' : '{{ csrf_token() }}' } });-->
-<!--</script>-->
 <!-- Bootstrap Core JavaScript -->
 <script src="{{ URL::asset('js/Dashboard/bootstrap.min.js') }}"></script>
 

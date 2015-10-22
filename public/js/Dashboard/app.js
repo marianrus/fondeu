@@ -7,7 +7,7 @@
 
     App.Helper = {
 
-        formatArticleDescription : function(element){
+        formatDescription : function(element){
             var self     = this;
             $(element).each(function(k, v){
                 var truncatedLink = self.truncateAndBuildLink($(v).text());
@@ -15,9 +15,9 @@
             });
         },
         truncateAndBuildLink : function(string){
-            var noOfChar = 100;
+            var noOfChar = 50;
             return string.length > noOfChar
-                ?  string.substr(0,noOfChar-1) +'...'
+                ?  string.substr(0,noOfChar-1) +' ...'
                 : string;
         },
         /**
