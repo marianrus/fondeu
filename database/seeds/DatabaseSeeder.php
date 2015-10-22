@@ -17,6 +17,8 @@ class DatabaseSeeder extends Seeder
         $this->call(UserTableSeeder::class);
         $this->call(CategorySeeder::class);
         $this->call(eu_project_type::class);
+        $this->call(PartnersInsert::class);
+        $this->call(CoursesInsert::class);
 
         Model::reguard();
     }

@@ -15,8 +15,8 @@ class Partners extends Migration
         Schema::create('partner', function(Blueprint $table){;
            $table->increments('partner_id');
            $table->string('partner_name');
-           $table->string('partner_phone');
-           $table->string('partner_phone2');
+           $table->string('partner_phone')->nullable();
+           $table->string('partner_phone2')->nullable();
 
            $table->string('address');
            $table->integer('city_id')->unsigned();

@@ -14,7 +14,7 @@ class EuProject extends Migration
     {
         Schema::create('eu_project',function(Blueprint $table){
             $table->increments('eu_project_id');
-            $table->integer('eu_project_type_id');
+            $table->integer('eu_project_type_id')->unsigned();
 
             $table->foreign('eu_project_type_id')
                 ->references('eu_project_type_id')
