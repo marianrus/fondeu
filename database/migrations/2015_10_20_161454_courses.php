@@ -13,7 +13,7 @@ class Courses extends Migration
     public function up()
     {
         Schema::create('courses',function(Blueprint $table){
-            $table->increments('id');
+            $table->increments('course_id');
 
             $table->string('course_name')->index();
             $table->text('course_description');
@@ -22,9 +22,10 @@ class Courses extends Migration
 
             $table->string('duration');
 
-            $table->integer('picture_id');
+            $table->integer('picture_id')->nullable();
 
-            $table->string('address');
+            $table->smallInteger('course_on_site')->default(0);
+            $table->string('location');
             $table->integer('city_id')->unsigned();
             $table->foreign('city_id')->references('city_id')->on('city');
 

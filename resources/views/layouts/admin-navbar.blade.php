@@ -261,20 +261,6 @@
             <li>
                 <a href="/articles-admin"><i class="fa fa-newspaper-o fa-fw"></i> Articole</a>
             </li>
-
-<!--            <li>-->
-                <!--                <a href="/articles-admin"><i class="fa fa-newspaper-o fa-fw"></i> Articole<span class="fa arrow"></span></a>-->
-                <!--                <ul class="nav nav-second-level">-->
-                <!--                    <li>-->
-                <!--                        <a href="/articles-admin-form">Adauga un articol</a>-->
-                <!--                    </li>-->
-                <!--                    <li>-->
-                <!--                        <a href="morris.html">Morris.js Charts</a>-->
-                <!--                    </li>-->
-                <!--                </ul>-->
-                <!--                <!-- /.nav-second-level -->
-                <!--            </li>-->
-
             <li>
                 <a href="/category-admin"><i class="fa fa-angellist fa-fw"></i> Categorii</a>
             </li>
@@ -285,7 +271,7 @@
                 <a href="/partners-admin"><i class="fa fa-hand-o-up fa-fw"></i> Parteneri</a>
             </li>
             <li>
-                <a href="/dashboard" onclick="alert('not implemented')">Cursuri</a>
+                <a href="/courses-admin"><i class="fa fa-book fa-fw"></i>Cursuri</a>
             </li>
             <li>
                 &nbsp;

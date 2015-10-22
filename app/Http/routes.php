@@ -54,5 +54,11 @@ Route::delete('eu-project-admin/{id}','EuProjectsAdminController@destroy');
 
 Route::get('partners-admin','PartnersAdminController@index');
 
+Route::get('courses-admin','CoursesAdminController@index');
+Route::post('courses-admin','CoursesAdminController@create');
+Route::get('courses-admin-form/{id}','CoursesAdminController@editForm');
+Route::put('courses-admin/{id}','CoursesAdminController@edit');
+Route::delete('courses-admin/{id}','CoursesAdminController@destroy');
+
 
 //http://www.johnpapa.net/toastr100beta/

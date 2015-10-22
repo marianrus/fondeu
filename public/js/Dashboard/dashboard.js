@@ -5,13 +5,25 @@ $(document).ready(function(){
         }
     });
     $('#dataTables-example').DataTable({
-        responsive: true
+        responsive: true,
+        "autoWidth": false,
+        'rowCallback' : function(){
+            App.Helper.formatDescription('.course-description');
+        }
     });
-    App.Helper.formatArticleDescription('.article-description');
+    App.Helper.formatDescription('.article-description');
+    App.Helper.formatDescription('.course-description');
 
     $('#project_start_at').datepicker();
     $('#project_ends_at').datepicker();
+//    $('.date').datepicker();
+    populateCities();
 });
+
+function populateCities(){
+    var county = $('#county_id').val();
+    App.Helper.ajaxCall()
+}
 
 
 $('.category-td').click(function(){
@@ -70,6 +82,28 @@ function deleteArticle(articleId){
                 function(){
                     App.Dialog.alert(
                         'Articolul nu a putu fi sters!'
+                    );
+                }
+            );
+        }
+    );
+}
+function deleteCourse(courseId){
+    App.Dialog.confirm(
+        'Esti sigur ca vrei sa stergi cursul?',
+        function(){
+            App.Helper.ajaxCall(
+                '/courses-admin/'+ courseId,
+                'DELETE',
+                function(){
+                    App.Dialog.alert(
+                        'Cursul a fost sters cu success!!',
+                        $('#article-'+courseId).remove()
+                    )
+                },
+                function(){
+                    App.Dialog.alert(
+                        'Cursul nu a putu fi sters!'
                     );
                 }
             );
