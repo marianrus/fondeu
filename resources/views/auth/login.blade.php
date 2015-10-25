@@ -1,4 +1,4 @@
-@include('layouts.admin-header');
+@include('layouts.backend.admin-header');
 
 <div class="container">
     <div class="row">
@@ -31,4 +31,4 @@
     </div>
 </div>
 
-@include('layouts.admin-footer');
+@include('layouts.backend.admin-footer');

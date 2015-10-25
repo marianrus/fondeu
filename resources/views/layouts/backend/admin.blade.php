@@ -1,8 +1,6 @@
-@include('layouts.admin-header');
+@include('layouts.backend.admin-header');
 
-{{-- @yield('content') --}}
-
-@include('layouts.admin-navbar')
+@include('layouts.backend.admin-navbar')
 
 <div id="page-wrapper">
     <div class="row">
@@ -23,4 +21,4 @@
         </div>
     </div>
 </div>
-@include('layouts.admin-footer')
+@include('layouts.backend.admin-footer')
