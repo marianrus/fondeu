@@ -13,24 +13,43 @@
 /**
  *
  */
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('home', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+//Route::get('home', function () {
+//    return view('welcome');
+//});
 
-//Route::get('dashboard',[
-//    'middleware' => 'auth',
-//    'dashboard' => 'DashboardController@index'
-//]);
+/**********************************************************
+ *                      Frontend                          *
+ *********************************************************/
+
+Route::get('/','HomeController@index');
 
 
+/**
+ * Article
+ */
+Route::get('/articles','ArticleController@index');
+Route::get('/articles/{id}','ArticleController@show');
+
+
+
+/**********************************************************
+ *                      Backend                           *
+ *********************************************************/
+
+/**
+ * Dashboard
+ */
 Route::get('dashboard','DashboardController@index');
 Route::get('auth/login','Auth\AuthController@getLogin');
 Route::post('auth/login' ,'Auth\AuthController@postLogin');
 Route::get('auth/logout','Auth\AuthController@getLogout');
 
+/**
+ * Admin Articles
+ */
 Route::get('articles-admin','ArticlesAdminController@index');
 Route::get('articles-admin/{id}','ArticlesAdminController@edit');
 Route::get('articles-admin-form','ArticlesAdminController@getForm');
@@ -39,6 +58,9 @@ Route::put('articles-admin-form/{id}','ArticlesAdminController@update');
 Route::delete('articles-admin/{id}','ArticlesAdminController@destroy');
 
 
+/**
+ * Admin  Category
+ */
 Route::get('category-admin','CategoryAdminController@index');
 Route::get('category-admin-createForm','CategoryAdminController@getCreateForm');
 Route::get('category-admin/{id}','CategoryAdminController@show');
@@ -46,14 +68,22 @@ Route::put('category-admin/{id}','CategoryAdminController@update');
 Route::delete('category-admin/{id}','CategoryAdminController@destroy');
 Route::post('category-admin','CategoryAdminController@create');
 
+/**
+ * Admin Eu Projects
+ */
 Route::get('eu-projects-admin','EuProjectsAdminController@index');
 Route::get('eu-projects-createForm','EuProjectsAdminController@createForm');
 Route::post('eu-project-admin','EuProjectsAdminController@create');
 Route::delete('eu-project-admin/{id}','EuProjectsAdminController@destroy');
 
-
+/**
+ * Admin Partners
+ */
 Route::get('partners-admin','PartnersAdminController@index');
 
+/**
+* Admin Courses
+ */
 Route::get('courses-admin','CoursesAdminController@index');
 Route::post('courses-admin','CoursesAdminController@create');
 Route::get('courses-admin-form/{id}','CoursesAdminController@editForm');
