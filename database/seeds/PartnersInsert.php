@@ -16,7 +16,7 @@ class PartnersInsert extends Seeder
             try{
                 DB::table('partner')->insert([
                     'partner_id'    => $i,
-                    'partner_name'  => 'Rock'.str_random(),
+                    'partner_name'  => 'Partener '.$i,
                     'partner_phone' => rand(5000, 10000),
                     'city_id'       => rand(1,10000),
                     'county_id'     => rand(1,40),

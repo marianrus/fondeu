@@ -27,6 +27,8 @@ class Courses extends Migration
 
             $table->integer('picture_id')->nullable();
 
+            $table->integer('viewed')->unsigned();
+
             $table->smallInteger('course_on_site')->default(0);
 
             $table->smallInteger('is_paid')->default(0);

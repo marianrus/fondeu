@@ -25,7 +25,7 @@ class CoursesInsert extends Seeder
         {
             try{
                 DB::table('courses')->insert([
-                    'course_name'           => str_random(),
+                    'course_name'           => 'Curs nr.' . $i,
                     'course_description'    => $this->courseDescription() ?: 'asdadsadada',
                     'course_from'           => date('Y-m-d'),
                     'course_to'             => date('Y-m-d'),
@@ -33,13 +33,13 @@ class CoursesInsert extends Seeder
                     'city_id'               => rand(1,10000),
                     'county_id'             => rand(1,40),
                     'partner_id'            => rand(0,10),
-
+                    'viewed'                => rand(0,1000),
                     'course_on_site'        => rand(0,1),
                     'is_paid'               => rand(0,1),
                     'category_course_id'    => rand(1,5)
                 ]);
             }catch (Exception $e){
-                
+
             }
         }
     }
