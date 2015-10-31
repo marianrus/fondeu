@@ -1,4 +1,5 @@
-<div class="tabs no_scroll {{$div_class_append}} clearfix">
+
+<div class="tabs no_scroll @if( isset($div_class_append) ) {{$div_class_append}} @endif clearfix">
     <ul class="tabs_navigation clearfix">
         <li>
             <a href="#sidebar-most-read" title="Most Read">
