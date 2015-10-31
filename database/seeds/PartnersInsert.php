@@ -10,7 +10,7 @@ class PartnersInsert extends Seeder
      * @return void
      */
     public function run()
-    {echo'run';
+    {
         for($i=0; $i<10; $i++)
         {
             try{
