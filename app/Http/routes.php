@@ -10,21 +10,25 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-/**
- *
- */
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-//Route::get('home', function () {
-//    return view('welcome');
-//});
 
 /**********************************************************
  *                      Frontend                          *
  *********************************************************/
 
 Route::get('/','HomeController@index');
+
+/**
+ * Courses
+ */
+Route::get('/cursuri','CoursesController@index');
+Route::get('/curs/{id}','CoursesController@show');
+
+/**
+ * Courses Category
+ */
+Route::get('/categorie','CoursesCategoryController@index');
+Route::get('/categorie/{id}','CoursesCategoryController@show');
+
 
 
 /**
@@ -92,3 +96,4 @@ Route::delete('courses-admin/{id}','CoursesAdminController@destroy');
 
 
 //http://www.johnpapa.net/toastr100beta/
+//View::composer('layouts.frontend.master-menu','App\Composers\MenuComposer');

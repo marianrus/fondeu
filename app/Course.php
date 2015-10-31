@@ -11,6 +11,7 @@ class Course extends Model
     protected $primaryKey = 'course_id';
 
     public $timestamps = false;
+
     protected $fillable =[
         'course_name',
         'course_description',
@@ -22,4 +23,31 @@ class Course extends Model
         'county_id',
         'partner_id'
     ];
+
+    /**
+     * @param $courseCategoryId
+     * @return mixed
+     */
+    public static function getCourses($courseCategoryId)
+    {
+        return self::where('category_course_id', $courseCategoryId)->get();
+    }
+
+
+    public static function getMostViewedCourses($limit=9)
+    {
+        return self::orderBy('viewed','desc')
+            ->join('category_course','category_course.category_course_id', '=','courses.category_course_id')
+            ->take($limit)
+            ->get();
+    }
+
+    public static function getCourse($courseId)
+    {
+        return self::where('course_id', '=', $courseId)
+            ->join('category_course','category_course.category_course_id', '=','courses.category_course_id')
+            ->join('partner','partner.partner_id', '=','courses.partner_id')
+            ->take(1)
+            ->get();
+    }
 }
