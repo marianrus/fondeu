@@ -84,8 +84,8 @@
         <div class="header_container">
             <div class="header clearfix">
                 <div class="logo">
-                    <h1><a href="home.html" title="Pressroom">Pressroom</a></h1>
-                    <h4>News and Magazine Template</h4>
+                    <h1><a href="/" title="{{Config::get('fondnews.application_name')}}">{{Config::get('fondnews.application_name')}}</a></h1>
+                    <h4>{{Config::get('fondnews.application_description')}}</h4>
                 </div>
                 <div class="placeholder">728 x 90</div>
             </div>
