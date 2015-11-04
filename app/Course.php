@@ -50,4 +50,11 @@ class Course extends Model
             ->take(1)
             ->get();
     }
+    public static function getAllCourses( $limit = 10)
+    {
+        return self::find($limit)
+            ->join('category_course','category_course.category_course_id', '=','courses.category_course_id')
+            ->join('partner','partner.partner_id', '=','courses.partner_id')
+            ->get();
+    }
 }

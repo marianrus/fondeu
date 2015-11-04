@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
+use App\County;
 use App\Course;
 use Illuminate\Http\Request;
 use App\Http\Requests;
@@ -16,7 +18,12 @@ class CoursesController extends Controller
      */
     public function index()
     {
-        //
+        return view('frontend.courses.index',[
+                'courses' => Course::getAllCourses(),
+                'categories' => Category::all(),
+                'counties'  => \DB::table('county')->orderBy('county_name')->get()
+            ]
+        );
     }
 
     /**

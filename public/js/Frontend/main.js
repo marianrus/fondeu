@@ -1446,4 +1446,30 @@ jQuery(document).ready(function($){
 				$(this).css("font-size", size_to_set + "px");
 		});
 	});
+
+
+//    if(!$('#cities').val()){
+//        $('#cities').accordion("activate", false);
+//    }
+
+    $('#county').change(function(e){
+        App.Helper.ajaxCall(
+          '/helper/cities/'+$(e.currentTarget).val(),
+            'GET',
+            function(r){
+                $('#cities option').remove();
+                $.each(r, function(key,val){
+                    $('<option>',{
+                            value : val.city_id,
+                            text  : val.city_name
+                        }
+                    ).appendTo('#cities');
+                });
+
+            },
+            function(e){
+                alert('error');
+            }
+        );
+    });
 });
