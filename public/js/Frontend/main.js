@@ -90,6 +90,11 @@ var map = null;
 var marker = null;
 var menu_position = null;
 jQuery(document).ready(function($){
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
 	"use strict";
 	//mobile menu
 	$(".mobile-menu-switch").click(function(event){
@@ -1458,6 +1463,11 @@ jQuery(document).ready(function($){
             'GET',
             function(r){
                 $('#cities option').remove();
+                $('<option>',{
+                        value : 0,
+                        text  : ''
+                    }
+                ).appendTo('#cities');
                 $.each(r, function(key,val){
                     $('<option>',{
                             value : val.city_id,
@@ -1472,4 +1482,51 @@ jQuery(document).ready(function($){
             }
         );
     });
+
+    function getFiltersData(){
+        return  {
+            'category' :  $('#category').val(),
+            'county'   :  $('#county').val() || '',
+            'city'     :  $('#cities').val() || '',
+            'price'    :  {
+                'from' : parseInt($('#price_from').val()),
+                'to'   : parseInt($('#price_to').val())
+            }
+        };
+    };
+
+    function makeFilterRequest(filters){
+        App.Helper.ajaxCall(
+            '/filter',
+            'POST',
+            function(response){
+                $('.post').remove();
+                if(!response){
+                    alert('none');
+                    $('.column_2_1').append($('<div>',{
+                        text : 'Nu s-a gasit nici un curs dupa criteriile introduse.'
+                    }));
+                    return;
+                }
+                $.each(response,function(k,r){
+                    $('.column_1_2').append(App.Helper.FrontendHelper.fillPostBox(r));
+                })
+            },
+            function(e){
+                alert('error');
+            },
+            filters
+        );
+    }
+
+    $('#filters').change(function(){
+        makeFilterRequest(getFiltersData());
+    });
+    $('#price_from').focusout(function(){
+        makeFilterRequest(getFiltersData());
+    });
+    $('#price_to').focusout(function(){
+        makeFilterRequest(getFiltersData());
+    });
+
 });
