@@ -1,6 +1,6 @@
 <div class="page_header_left">
     <h1 class="page_title">
-        {{$category['category_course_name']}}
+        {{isset($category['category_course_name']) ?$category['category_course_name'] : '' }}
     </h1>
 </div>
 <div class="page_header_right">

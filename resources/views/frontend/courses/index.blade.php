@@ -14,9 +14,24 @@
     <hr class="divider last">
 </div>
 
+
+<div class="col-lg-12 margin_top_20 margin-bottom" id="primary">
+    <div id="search" class="input-group input-group-lg">
+        <input name="search" type="text" class="form-control search-query ajax" placeholder="Cauta prin Cursuri" />
+           <span class="input-group-btn">
+             <button class="btn btn-primary btn-search" type="button"><i class="fa fa-search">Cauta</i></button>
+           </span>
+    </div>
+
+    <div class="row loading" id="items">
+    </div>
+</div>
+
+<br/>
+
 <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<!--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>-->
 <div class="row">
 <div class="column column_1_3 page_margin_top">
 
@@ -32,10 +47,10 @@
             </div>
             <div id="categories" class="panel-collapse collapse in">
                 <div class="panel-body">
-                    <select name="category" class="form-control ajax">
-                        <option value="">Toate</option>
+                    <select id="category" class="form-control ajax">
+                        <option value="0">Toate</option>
                         @foreach($categories as $cat)
-                        <option id="{{$cat->category_id}}">{{$cat->category_name}}</option>
+                        <option value="{{$cat->category_course_id}}">{{$cat->category_course_name}}</option>
                         @endforeach
                     </select>
                 </div>
@@ -73,7 +88,6 @@
             <div id="city-accordion" class="panel-collapse collapse in">
                 <div class="panel-body">
                     <select id="cities" class="form-control">
-
                     </select>
                 </div>
             </div>
@@ -85,35 +99,32 @@
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#price">
-                        Price Range
+                       Pret
                     </a>
                 </h4>
             </div>
             <div id="price" class="panel-collapse collapse in">
                 <div class="panel-body">
-                    <input name="price" id="pricing" class="ajax" type="text" value="" data-slider-min="4" data-slider-max="50" data-slider-step="1" data-slider-value="[4,18]"/><br />
-                    $4 <span class="pull-right">$50</span>
-
+                    <div class="form-group ">
+                        <div class="pull-left col-md-6">
+                            <input class="form-control pull-left center_align number col-md-4"
+                                   type="text"
+                                   placeholder="De la"
+                                   value="0"
+                                   id="price_from">
+                        </div>
+                        <div class="pull-left col-md-6">
+                            <input class="form-control center_align pull-left number col-md-4"
+                                   type="text"
+                                   placeholder="Pana la"
+                                   value="1000"
+                                   id="price_to">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#price">
-                        Price Range
-                    </a>
-                </h4>
-            </div>
-            <div id="price" class="panel-collapse collapse in">
-                <div class="panel-body">
-                    <input name="price" id="pricing" class="ajax" type="text" value="" data-slider-min="4" data-slider-max="50" data-slider-step="1" data-slider-value="[4,18]"/><br />
-                    $4 <span class="pull-right">$50</span>
-
-                </div>
-            </div>
-        </div>
 
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -148,182 +159,29 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#compability">
-                        Compability
+                    <a data-toggle="collapse" data-parent="#accordion" href="#opportunities">
+                        Oportunitati
                     </a>
                 </h4>
             </div>
-            <div id="compability" class="panel-collapse collapse in">
+            <div id="opportunities" class="panel-collapse collapse in">
                 <div class="panel-body">
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" class="ajax" name="browsers[]" value="latest-chrome" checked>
-                            Latest Chrome</label>
+                            <input type="radio"  name="opportunities" value="1" >
+                            Cu</label>
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" class="ajax" name="browsers[]" value="latest-firefox" checked>
-                            Latest Firefox</label>
+                            <input type="radio"  name="opportunities" value="0">
+                            Fara</label>
                     </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" class="ajax" name="browsers[]" value="latest-safari" checked>
-                            Latest Safari</label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" class="ajax" name="browsers[]" value="latest-opera" checked>
-                            Latest Opera</label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" class="ajax" name="browsers[]" value="internet-explorer-11" checked>
-                            Internet Explorer 11</label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" class="ajax" name="browsers[]" value="internet-explorer-10" checked>
-                            Internet Explorer 10</label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" class="ajax" name="browsers[]" value="internet-explorer-9" checked>
-                            Internet Explorer 9</label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" class="ajax" name="browsers[]" value="internet-explorer-8" >
-                            Internet Explorer 8</label>
-                    </div>
-
-                    <span class="select-all">Select all</span> |
-                    <span class="deselect-all">Deselect all</span>
-
                 </div>
             </div>
         </div>
 
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#columns">
-                        Columns
-                    </a>
-                </h4>
-            </div>
-            <div id="columns" class="panel-collapse collapse in">
-                <div class="panel-body">
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" class="ajax" name="columns[]" value="1" checked>
-                            1</label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" class="ajax" name="columns[]" value="2" checked>
-                            2</label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" class="ajax" name="columns[]" value="3" checked>
-                            3</label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" class="ajax" name="columns[]" value="4plus" checked>
-                            4+</label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" class="ajax" name="columns[]" value="na" checked>
-                            N/A</label>
-                    </div>
-
-                    <span class="select-all">Select all</span> |
-                    <span class="deselect-all">Deselect all</span>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#preprocessors">
-                        CSS Preprocessors
-                    </a>
-                </h4>
-            </div>
-            <div id="preprocessors" class="panel-collapse collapse in">
-                <div class="panel-body">
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" class="ajax" name="preprocessors[]" value="sass" checked>
-                            SASS</label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" class="ajax" name="preprocessors[]" value="less" checked>
-                            LESS</label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" class="ajax" name="preprocessors[]" value="na" checked>
-                            N/A</label>
-                    </div>
-
-                    <span class="select-all">Select all</span> |
-                    <span class="deselect-all">Deselect all</span>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#type">
-                        Type
-                    </a>
-                </h4>
-            </div>
-            <div id="type" class="panel-collapse collapse in">
-                <div class="panel-body">
-
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" class="ajax" name="types[]" value="wrapbootstrap" checked>
-                            Wrapbootstrap</label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" class="ajax" name="types[]" value="bootstrapbay" checked>
-                            BootstrapBay</label>
-                    </div>
 
 
-
-                    <span class="select-all">Select all</span> |
-                    <span class="deselect-all">Deselect all</span>
-                </div>
-            </div>
-        </div>
-
-        <script>
-            $(document).ready(function(){
-                $("#pricing").slider({
-                    min : 10,
-                    max : 30
-                });
-            })
-
-            // $(".search-query").on("keydown", function(event){
-            //     if (event.keyCode == 13) {
-            //       changeHash();
-            //     }
-            //     e.preventDefault();
-            // });
-        </script>
         </div>
     </div>
 </div>
@@ -353,8 +211,9 @@
                                 10:11 PM, Feb 02
                             </li>
                         </ul>
-                        <p class="course-description">{{substr($courses[$index]->course_description,0 ,300)}}</p>
-                        <a class="read_more" href="post_quote.html" title="Read more"><span class="arrow"></span><span>READ MORE</span></a>
+                        <p class="course-description">{{$courses[$index]->course_description_short}}</p>
+                        <p class="pull-left"><span class="glyphicon glyphicon-map-marker">{{$courses[$index]->county_name}}, {{$courses[$index]->city_name}}</span></p>
+                        <a class="read_more" href="post_quote.html" title="Read morzze"><span class="arrow"></span><span>READ MORE</span></a>
                     </div>
                 </li>
                 @if($index++)@endif
@@ -362,6 +221,7 @@
         </ul>
         @endfor
     </div>
-    @include('layouts.frontend.master-pagination')
+
+    @include('layouts.frontend.master-pagination', $paginate=$courses)
 </div>
 @stop

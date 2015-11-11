@@ -252,7 +252,10 @@
         <script src="{{ URL::asset('js/Frontend/jquery.qtip.min.js') }}"></script>
         <script src="{{ URL::asset('js/Frontend/jquery.blockUI.js') }}"></script>
         <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false"></script>
-        <script src="{{ URL::asset('js/Frontend/main.js') }}"></script>
         <script src="{{ URL::asset('js/Frontend/odometer.min.js') }}"></script>
+        <script src="{{ URL::asset('js/Frontend/bootstrap-slider.min.js') }}"></script>
+        <script src="{{ URL::asset('js/Dashboard/app.js') }}"></script>
+        <script src="{{ URL::asset('js/Frontend/main.js') }}"></script>
+        <script src="{{ URL::asset('js/Dashboard/bootstrap.min.js') }}"></script>
     </body>
 </html>

@@ -211,8 +211,6 @@
 </div>
 @stop
 
-
-
 @section('right-sidebar')
 <div class="column column_2_3">
     <div class="row">
@@ -243,6 +241,6 @@
         </ul>
         @endfor
     </div>
-    @include('layouts.frontend.master-pagination')
+@{{ @include('layouts.frontend.master-pagination',$paginate=$courses) }}
 </div>
 @stop

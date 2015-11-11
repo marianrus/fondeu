@@ -11,23 +11,7 @@
             Articole
         </a>
     </li>
-<!--    <li class="submenu">-->
-<!--        <a href="#" title="Pages">-->
-<!--            Pages-->
-<!--        </a>-->
-<!--        <ul>-->
-<!--            <li>-->
-<!--                <a href="about.html" title="About Style 1">-->
-<!--                    About Style 1-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="about_2.html" title="About Style 2">-->
-<!--                    About Style 2-->
-<!--                </a>-->
-<!--            </li>-->
-<!--        </ul>-->
-<!--<!--    </li>-->-->
+
 
     <li class="submenu mega_menu_parent">
         <a href="/cursuri" title="Mega Menu">
@@ -155,20 +139,6 @@
                     </ul>
                 </li>
                 @endforeach
-<!--                <li class="post first">-->
-<!--                    <a href="post_review_2.html" title="Study Linking Illnes and Salt Leaves Researchers Doubtful">-->
-<!--                        <span class="icon"><span>6.7</span></span>-->
-<!--                        <img src='images/samples/330x242/image_01.jpg' alt='img'>-->
-<!--                    </a>-->
-<!--                    <h5><a href="post_review_2.html" title="Study Linking Illnes and Salt Leaves Researchers Doubtful">Study-->
-<!--                            Linking Illnes and Salt Leaves Researchers Doubtful</a></h5>-->
-<!--                    <ul class="post_details simple">-->
-<!--                        <li class="category"><a title="HEALTH" href="category_health.html">HEALTH</a></li>-->
-<!--                        <li class="date">-->
-<!--                            10:11 PM, Feb 02-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </li>-->
             </ul>
         </li>
 
@@ -342,119 +312,11 @@
         </li>
     </ul>
     </li>
-<!--    <li class="submenu">-->
-<!--        <a href="#" title="Post Formats">-->
-<!--            Post Formats-->
-<!--        </a>-->
-<!--        <ul>-->
-<!--            <li>-->
-<!--                <a href="post.html" title="Post Default">-->
-<!--                    Post Default-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="post_gallery.html" title="Post Gallery">-->
-<!--                    Post Gallery-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="post_small_image.html" title="Post Small Image">-->
-<!--                    Post Small Image-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="post_video.html" title="Post Video YouTube">-->
-<!--                    Post Video Youtube-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="post_video_2.html" title="Post Video Vimeo">-->
-<!--                    Post Video Vimeo-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="post_soundcloud.html" title="Post Soundcloud">-->
-<!--                    Post Soundcloud-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="post_review.html" title="Post Review Style 1">-->
-<!--                    Post Review Style 1-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="post_review_2.html" title="Post Review Style 2">-->
-<!--                    Post Review Style 2-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="post_quote.html" title="Post Quote Style 1">-->
-<!--                    Post Quote Style 1-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="post_quote_2.html" title="Post Quote Style 2">-->
-<!--                    Post Quote Style 2-->
-<!--                </a>-->
-<!--            </li>-->
-<!--        </ul>-->
-<!--<!--    </li>-->-->
-<!--    <li class="submenu">-->
-<!--        <a href="blog.html" title="Blog">-->
-<!--            Blog-->
-<!--        </a>-->
-<!--        <ul>-->
-<!--            <li>-->
-<!--                <a href="blog_small_slider.html" title="Blog Small Slider">-->
-<!--                    Blog Small Slider-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li class="submenu">-->
-<!--                <a href="#" title="Blog 1 column">-->
-<!--                    Blog 1 Column-->
-<!--                </a>-->
-<!--                <ul>-->
-<!--                    <li>-->
-<!--                        <a href="blog.html" title="Blog With Right Sidebar">-->
-<!--                            Blog With Right Sidebar-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="blog_left_sidebar.html" title="Blog With Left Sidebar">-->
-<!--                            Blog With Left Sidebar-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </li>-->
-<!--            <li class="submenu">-->
-<!--                <a href="#" title="Blog 2 columns">-->
-<!--                    Blog 2 Columns-->
-<!--                </a>-->
-<!--                <ul>-->
-<!--                    <li>-->
-<!--                        <a href="blog_2_columns.html" title="Right Sidebar">-->
-<!--                            Right Sidebar-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="blog_2_columns_left_sidebar.html" title="Left Sidebar">-->
-<!--                            Left Sidebar-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="blog_3_columns.html" title="Blog 3 Columns">-->
-<!--                    Blog 3 Columns-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="search.html?s=Maecenas+Mauris" title="Search Page Template">-->
-<!--                    Search Page Template-->
-<!--                </a>-->
-<!--            </li>-->
-<!--        </ul>-->
-<!--    </li>-->
+    <li class="submenu">
+        <a href="/opp">
+            Oportunitati
+        </a>
+    </li>
     <li class="submenu">
         <a href="authors.html" title="Authors">
             Parteneri
@@ -468,38 +330,6 @@
             <li>
                 <a href="author.html" title="Author Single">
                     Author Single
-                </a>
-            </li>
-        </ul>
-    </li>
-    <li class="submenu">
-        <a href="#" title="Categories">
-            Categories
-        </a>
-        <ul>
-            <li>
-                <a href="category_health.html" title="Health">
-                    Health
-                </a>
-            </li>
-            <li>
-                <a href="category_science.html" title="Science">
-                    Science
-                </a>
-            </li>
-            <li>
-                <a href="category_sports.html" title="Sports">
-                    Sports
-                </a>
-            </li>
-            <li>
-                <a href="category_world.html" title="World">
-                    World
-                </a>
-            </li>
-            <li>
-                <a href="category_lifestyle.html" title="Lifestyle">
-                    Lifestyle
                 </a>
             </li>
         </ul>
