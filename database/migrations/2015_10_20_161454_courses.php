@@ -19,6 +19,10 @@ class Courses extends Migration
 
             $table->text('course_description');
 
+            $table->text('price');
+
+            $table->text('course_description_short');
+
             $table->date('course_from');
 
             $table->date('course_to');

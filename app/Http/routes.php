@@ -22,6 +22,7 @@ Route::get('/','HomeController@index');
  */
 Route::get('/cursuri','CoursesController@index');
 Route::get('/curs/{id}','CoursesController@show');
+Route::post('/filter','CoursesController@filterCourses');
 
 /**
  * Courses Category
@@ -38,6 +39,11 @@ Route::get('/articles','ArticleController@index');
 Route::get('/articles/{id}','ArticleController@show');
 
 
+/**
+ * Helper controller
+ */
+
+Route::get('/helper/cities/{id}','HelperController@getCities');
 
 /**********************************************************
  *                      Backend                           *
@@ -97,3 +103,9 @@ Route::delete('courses-admin/{id}','CoursesAdminController@destroy');
 
 //http://www.johnpapa.net/toastr100beta/
 //View::composer('layouts.frontend.master-menu','App\Composers\MenuComposer');
+
+// Display all SQL executed in Eloquent
+Event::listen('illuminate.query', function($query)
+{
+    DB::getQueryLog();
+});

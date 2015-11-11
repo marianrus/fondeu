@@ -2,15 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
+use App\City;
 use App\County;
-use App\Course;
-use App\CourseCategory;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class CoursesController extends Controller
+class HelperController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,12 +17,7 @@ class CoursesController extends Controller
      */
     public function index()
     {
-        return view('frontend.courses.index',[
-                'courses' => Course::getAllCourses(),
-                'categories' => CourseCategory::all(),
-                'counties'  => \DB::table('county')->orderBy('county_name')->get()
-            ]
-        );
+        //
     }
 
     /**
@@ -38,30 +31,14 @@ class CoursesController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
+     * Returns cities associated to a county.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function getCities($countyId)
     {
-        $a = Course::getCourse($id);
-        return view('frontend.courses.show',
-            [
-                'course' => Course::getCourse($id)
-            ]
-        );
+        return City::where('county_id','=',$countyId)->orderBy('city_name')->get(['city_name','city_id']);
     }
 
     /**
@@ -96,9 +73,5 @@ class CoursesController extends Controller
     public function destroy($id)
     {
         //
-    }
-    public function filterCourses(Request $request)
-    {
-        return json_encode(Course::filterCourses($request->all()));
     }
 }

@@ -21,12 +21,14 @@ class CoursesInsert extends Seeder
         ];
         DB::statement('ALTER TABLE courses AUTO_INCREMENT = 1');
 
-        for($i=0; $i < 50; $i++)
+        for($i=0; $i < 50*3; $i++)
         {
+            $description = $this->courseDescription() ;
             try{
                 DB::table('courses')->insert([
                     'course_name'           => 'Curs nr.' . $i,
-                    'course_description'    => $this->courseDescription() ?: 'asdadsadada',
+                    'course_description'    => $description ?: 'asdadsadada',
+                    'course_description_short' => substr($description,0,300) .'...',
                     'course_from'           => date('Y-m-d'),
                     'course_to'             => date('Y-m-d'),
                     'duration'              => $durations[rand(0,count($durations))],
@@ -36,7 +38,8 @@ class CoursesInsert extends Seeder
                     'viewed'                => rand(0,1000),
                     'course_on_site'        => rand(0,1),
                     'is_paid'               => rand(0,1),
-                    'category_course_id'    => rand(1,5)
+                    'category_course_id'    => rand(1,5),
+                    'price'                 => rand(200, 1500)
                 ]);
             }catch (Exception $e){
 
