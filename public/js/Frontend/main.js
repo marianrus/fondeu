@@ -1452,11 +1452,6 @@ jQuery(document).ready(function($){
 		});
 	});
 
-
-//    if(!$('#cities').val()){
-//        $('#cities').accordion("activate", false);
-//    }
-
     $('#county').change(function(e){
         App.Helper.ajaxCall(
           '/helper/cities/'+$(e.currentTarget).val(),
@@ -1518,6 +1513,15 @@ jQuery(document).ready(function($){
             filters
         );
     }
+
+    $('#search-input').keyup(function(){
+        var query = $('#search-input').val();
+        if(query.length > 3){
+            makeFilterRequest({
+                query_string : query
+            });
+        }
+    });
 
     $('#filters').change(function(){
         makeFilterRequest(getFiltersData());

@@ -67,14 +67,14 @@ class Course extends Model
 
         $where = [];
 
-        if($filter['category']){
+        if(!empty($filter['category'])){
             $where['courses.category_course_id'] = $filter['category'];
         }
 
-        if($filter['county'] != 'Toate'){
+        if(!empty($filter['county']) && $filter['county'] != 'Toate'){
             $where['courses.county_id'] = $filter['county'];
         }
-        if($filter['city']){
+        if(!empty($filter['city'])){
             $where['courses.city_id'] = $filter['city'];
         }
 
@@ -84,16 +84,18 @@ class Course extends Model
             ->join('city','city.city_id', '=','courses.city_id')
             ->join('county','county.county_id', '=','courses.county_id');
 
-        if($filter['price'] && $filter['price']['from'] <= $filter['price']['to']){
+        if($filter['query_string']){
+            $qS = $filter['query_string'];
+            $query->where('courses.course_name','like','%'.$qS.'%');
+            $query->orwhere('courses.course_description','like','%'.$qS.'%');
+        }
+        if(!empty($filter['price']) && $filter['price']['from'] <= $filter['price']['to']){
             $from = $filter['price']['from'];
             $to   = $filter['price']['to'];
             $query->where($where);
             $query->orWhere(function($q) use($from, $to,$where){
                 $q  ->where('courses.price', '>=',$from)
                     ->where('courses.price', '<=',$to);
-//                foreach($where as $k =>$w){
-//                    $q->where($k , '=', $w);
-//                }
             });
         }
         return $query->get();

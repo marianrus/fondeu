@@ -17,7 +17,7 @@
 
 <div class="col-lg-12 margin_top_20 margin-bottom" id="primary">
     <div id="search" class="input-group input-group-lg">
-        <input name="search" type="text" class="form-control search-query ajax" placeholder="Cauta prin Cursuri" />
+        <input id="search-input" name="search" type="text" class="form-control search-query ajax" placeholder="Cauta prin Cursuri" />
            <span class="input-group-btn">
              <button class="btn btn-primary btn-search" type="button"><i class="fa fa-search">Cauta</i></button>
            </span>
@@ -179,15 +179,10 @@
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
         </div>
     </div>
     @stop
-
-
 
     @section('right-sidebar')
     <div class="column column_2_3">
