@@ -33,168 +33,168 @@
 
 <!--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>-->
 <div class="row">
-<div class="column column_1_3 page_margin_top">
+    <div class="column column_1_3 page_margin_top">
 
-    <div class="col-lg-12" id="secondary">
-        <div class="panel-group-ba" id="filters">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#categories">
-                        Categorie
-                    </a>
-                </h4>
-            </div>
-            <div id="categories" class="panel-collapse collapse in">
-                <div class="panel-body">
-                    <select id="category" class="form-control ajax">
-                        <option value="0">Toate</option>
-                        @foreach($categories as $cat)
-                        <option value="{{$cat->category_course_id}}">{{$cat->category_course_name}}</option>
-                        @endforeach
-                    </select>
-                </div>
-            </div>
-        </div>
-
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#categories">
-                        Judet
-                    </a>
-                </h4>
-            </div>
-            <div class="panel-collapse collapse in">
-                <div class="panel-body">
-                    <select id="county" name="category" class="form-control ajax">
-                        <option >Toate</option>
-                        @foreach($counties as $county)
-                            <option value="{{$county->county_id}}">{{$county->county_name}}</option>
-                        @endforeach
-                    </select>
-                </div>
-            </div>
-        </div>
-
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#city-accordion">
-                        Localitate
-                    </a>
-                </h4>
-            </div>
-            <div id="city-accordion" class="panel-collapse collapse in">
-                <div class="panel-body">
-                    <select id="cities" class="form-control">
-                    </select>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#price">
-                       Pret
-                    </a>
-                </h4>
-            </div>
-            <div id="price" class="panel-collapse collapse in">
-                <div class="panel-body">
-                    <div class="form-group ">
-                        <div class="pull-left col-md-6">
-                            <input class="form-control pull-left center_align number col-md-4"
-                                   type="text"
-                                   placeholder="De la"
-                                   value="0"
-                                   id="price_from">
-                        </div>
-                        <div class="pull-left col-md-6">
-                            <input class="form-control center_align pull-left number col-md-4"
-                                   type="text"
-                                   placeholder="Pana la"
-                                   value="1000"
-                                   id="price_to">
+        <div class="col-lg-12" id="secondary">
+            <div class="panel-group-ba" id="filters">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#categories">
+                                Categorie
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="categories" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <select id="category" class="form-control ajax">
+                                <option value="0">Toate</option>
+                                @foreach($categories as $cat)
+                                <option value="{{$cat->category_course_id}}">{{$cat->category_course_name}}</option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#branches">
-                        Cost
-                    </a>
-                </h4>
-            </div>
-            <div id="branches" class="panel-collapse collapse in">
-                <div class="panel-body">
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" class="ajax" name="branches[]" value="bs3" checked>
-                            Platite
-                        </label>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#categories">
+                                Judet
+                            </a>
+                        </h4>
                     </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" class="ajax" name="branches[]" value="bs2" checked>
-                            Gratis
-                        </label>
-                    </div>
-
-                    <span class="select-all">Select all</span> |
-                    <span class="deselect-all">Deselect all</span>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#opportunities">
-                        Oportunitati
-                    </a>
-                </h4>
-            </div>
-            <div id="opportunities" class="panel-collapse collapse in">
-                <div class="panel-body">
-                    <div class="checkbox">
-                        <label>
-                            <input type="radio"  name="opportunities" value="1" >
-                            Cu</label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="radio"  name="opportunities" value="0">
-                            Fara</label>
+                    <div class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <select id="county" name="category" class="form-control ajax">
+                                <option >Toate</option>
+                                @foreach($counties as $county)
+                                <option value="{{$county->county_id}}">{{$county->county_name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
                     </div>
                 </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#city-accordion">
+                                Localitate
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="city-accordion" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <select id="cities" class="form-control">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#price">
+                                Pret
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="price" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <div class="form-group ">
+                                <div class="pull-left col-md-6">
+                                    <input class="form-control pull-left center_align number col-md-4"
+                                           type="text"
+                                           placeholder="De la"
+                                           value="0"
+                                           id="price_from">
+                                </div>
+                                <div class="pull-left col-md-6">
+                                    <input class="form-control center_align pull-left number col-md-4"
+                                           type="text"
+                                           placeholder="Pana la"
+                                           value="1000"
+                                           id="price_to">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#branches">
+                                Cost
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="branches" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="ajax" name="branches[]" value="bs3" checked>
+                                    Platite
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="ajax" name="branches[]" value="bs2" checked>
+                                    Gratis
+                                </label>
+                            </div>
+
+                            <span class="select-all">Select all</span> |
+                            <span class="deselect-all">Deselect all</span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#opportunities">
+                                Oportunitati
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="opportunities" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="radio"  name="opportunities" value="1" >
+                                    Cu</label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="radio"  name="opportunities" value="0">
+                                    Fara</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
             </div>
-        </div>
-
-
-
         </div>
     </div>
-</div>
-@stop
+    @stop
 
 
 
-@section('right-sidebar')
-<div class="column column_2_3">
-    <div class="row">
-        @for($columns = 0, $index=0; $columns<2; $columns++)
-            <ul class="blog column column_1_2">
-            @for($rows=0; $rows< 4; $rows++)
+    @section('right-sidebar')
+    <div class="column column_2_3">
+        <div class="row">
+            @for($columns = 0, $index=0; $columns<2; $columns++)
+            <ul class="blog column column_2_2">
+                @for($rows=0; $rows< 4; $rows++)
                 @if($index==count($courses)) @break @endif
                 <li class="post">
                     <div class="post_content">
@@ -217,11 +217,11 @@
                     </div>
                 </li>
                 @if($index++)@endif
+                @endfor
+            </ul>
             @endfor
-        </ul>
-        @endfor
-    </div>
+        </div>
 
-    @include('layouts.frontend.master-pagination', $paginate=$courses)
-</div>
-@stop
+        @include('layouts.frontend.master-pagination', $paginate=$courses)
+    </div>
+    @stop

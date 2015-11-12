@@ -1509,7 +1509,7 @@ jQuery(document).ready(function($){
                     return;
                 }
                 $.each(response,function(k,r){
-                    $('.column_1_2').append(App.Helper.FrontendHelper.fillPostBox(r));
+                    $('.column_2_2').append(App.Helper.FrontendHelper.fillPostBox(r));
                 })
             },
             function(e){
