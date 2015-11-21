@@ -179,6 +179,10 @@
                         </div>
                     </div>
                 </div>
+
+                <input type="hidden" id="paginate-from" value="{{Config::get('fondnews.results_per_page')}}">
+                <input type="hidden" id="paginate-to" value="{{Config::get('fondnews.results_per_page') *2}}">
+                <input type="hidden" id="hasNext" value="1">
             </div>
         </div>
     </div>
@@ -187,36 +191,33 @@
     @section('right-sidebar')
     <div class="column column_2_3">
         <div class="row">
-            @for($columns = 0, $index=0; $columns<2; $columns++)
-            <ul class="blog column column_2_2">
-                @for($rows=0; $rows< 4; $rows++)
-                @if($index==count($courses)) @break @endif
-                <li class="post">
-                    <div class="post_content">
-                        <h2 class="with_number">
-                            <a href="post_quote.html" title="Built on Brotherhood, Club Lives Up to Name">
-                                {{$courses[$index]->course_name}}
-                            </a>
-                            <a class="comments_number" href="post_quote.html#comments_list" title="vizualizari">{{$courses[$index]->viewed}}<span class="arrow_comments"></span></a>
-                        </h2>
-                        <ul class="post_details">
-                            <li class="category">
-                                <a href="/categorie/{{$courses[$index]->category_course_id}}" title="{{$courses[$index]->category_course_name}}">{{$courses[$index]->category_course_name}}</a></li>
-                            <li class="date">
-                                10:11 PM, Feb 02
-                            </li>
-                        </ul>
-                        <p class="course-description">{{$courses[$index]->course_description_short}}</p>
-                        <p class="pull-left"><span class="glyphicon glyphicon-map-marker">{{$courses[$index]->county_name}}, {{$courses[$index]->city_name}}</span></p>
-                        <a class="read_more" href="post_quote.html" title="Read morzze"><span class="arrow"></span><span>READ MORE</span></a>
-                    </div>
-                </li>
-                @if($index++)@endif
-                @endfor
-            </ul>
-            @endfor
+                <ul class="blog column column_2_2">
+                    @foreach($courses as $course)
+                    <li class="post">
+                        <div class="post_content">
+                            <h2 class="with_number">
+                                <a href="curs/{{$course->course_id}}" title="Built on Brotherhood, Club Lives Up to Name">
+                                    {{$course->course_name}}
+                                </a>
+                                <a class="comments_number" href="post_quote.html#comments_list" title="vizualizari">{{$course->viewed}}<span class="arrow_comments"></span></a>
+                            </h2>
+                            <ul class="post_details">
+                                <li class="category">
+                                    <a href="/categorie/{{$course->category_course_id}}" title="{{$course->category_course_name}}">{{$course->category_course_name}}</a></li>
+                                <li class="date">
+                                    10:11 PM, Feb 02
+                                </li>
+                            </ul>
+                            <p class="course-description">{{$course->course_description_short}}</p>
+                            <p class="pull-left"><span class="glyphicon glyphicon-map-marker">{{$course->county_name}}, {{$course->city_name}}</span></p>
+                            <a class="read_more" href="/curs/{{$course->course_id}}" title="Read morzze"><span class="arrow"></span><span>Mai mult</span></a>
+                        </div>
+                    </li>
+                    @endforeach
+                </ul>
+
         </div>
 
-        @include('layouts.frontend.master-pagination', $paginate=$courses)
+        {{-- @include('layouts.frontend.master-pagination', $paginate=$courses)--}}
     </div>
     @stop

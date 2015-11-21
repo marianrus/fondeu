@@ -1478,6 +1478,8 @@ jQuery(document).ready(function($){
         );
     });
 
+
+
     function getFiltersData(){
         return  {
             'category' :  $('#category').val(),
@@ -1486,31 +1488,76 @@ jQuery(document).ready(function($){
             'price'    :  {
                 'from' : parseInt($('#price_from').val()),
                 'to'   : parseInt($('#price_to').val())
+            },
+            'pagination' : {
+                'from' : parseInt($('#paginate-from').val()),
+                'to'   : parseInt($('#paginate-to').val())
             }
         };
     };
 
-    function makeFilterRequest(filters){
+    $(window).unbind('scroll');
+    $(window).on('scroll', function(){
+        var documentHeight  = parseFloat($(document).height());
+        var windowHeight    = parseFloat($(window).height());
+        var diff = (documentHeight - windowHeight) / 2;
+
+        console.log("window scroll => "+ $(window).scrollTop() +" diff=>"+diff);
+        if(($(window).scrollTop() >= diff) && hasNext()){
+            console.log($(window).scrollTop() >  diff)
+            console.log('send');
+            makeFilterRequest(getFiltersData(), true);
+        }
+    });
+
+
+    function resetPaginationDom()
+    {
+        setPaginateDom(config.results_per_page, config.results_per_page *2);
+    }
+
+    function setHasNext(hasNext, count)
+    {
+        var next = 0;
+
+        if(hasNext && count > 0){
+            next = 1;
+        }
+        $('#hasNext').val(next);
+    }
+
+    function hasNext()
+    {
+        return $('#hasNext').val() == 1;
+    }
+
+    function setPaginateDom(paginateFrom, paginateTo)
+    {
+        $('#paginate-from').val(paginateFrom);
+        $('#paginate-to').val(paginateTo);
+    }
+
+    function makeFilterRequest(filters, append){
+        console.trace();
         App.Helper.ajaxCall(
             '/filter',
             'POST',
             function(response){
-                $('.post').remove();
-                if(!response){
-                    alert('none');
-                    $('.column_2_1').append($('<div>',{
-                        text : 'Nu s-a gasit nici un curs dupa criteriile introduse.'
-                    }));
-                    return;
+
+                setPaginateDom(response.pagination.from, response.pagination.to);
+                setHasNext(response.hasNext,response.count);
+                if(!append){
+                    $('.column_2_2').empty();
                 }
-                $.each(response,function(k,r){
+                $.each(response.results,function(k,r){
                     $('.column_2_2').append(App.Helper.FrontendHelper.fillPostBox(r));
                 })
             },
             function(e){
                 alert('error');
             },
-            filters
+            filters,
+            true
         );
     }
 
@@ -1524,12 +1571,15 @@ jQuery(document).ready(function($){
     });
 
     $('#filters').change(function(){
+        resetPaginationDom();
         makeFilterRequest(getFiltersData());
     });
     $('#price_from').focusout(function(){
+        resetPaginationDom();
         makeFilterRequest(getFiltersData());
     });
     $('#price_to').focusout(function(){
+        resetPaginationDom();
         makeFilterRequest(getFiltersData());
     });
 

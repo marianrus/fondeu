@@ -26,6 +26,12 @@ class Course extends Model
     ];
 
     /**
+     * Placeholder for where criteria
+     * @var array
+     */
+    private $where = [];
+
+    /**
      * @param $courseCategoryId
      * @return mixed
      */
@@ -62,9 +68,22 @@ class Course extends Model
 //            ->get();
     }
 
-    public static function filterCourses($filter)
+
+
+    private function setWhere()
     {
 
+    }
+
+
+    /**
+     * If the filter is null it is returned all set of data without any conditions
+     *
+     * @param null $filter
+     * @return array
+     */
+    public function filterCourses($filter=null)
+    {
         $where = [];
 
         if(!empty($filter['category'])){
@@ -84,7 +103,9 @@ class Course extends Model
             ->join('city','city.city_id', '=','courses.city_id')
             ->join('county','county.county_id', '=','courses.county_id');
 
-        if($filter['query_string']){
+        $query->whereRaw("1 = 1");
+
+        if(!empty($filter['query_string'])){
             $qS = $filter['query_string'];
             $query->where('courses.course_name','like','%'.$qS.'%');
             $query->orwhere('courses.course_description','like','%'.$qS.'%');
@@ -98,6 +119,34 @@ class Course extends Model
                     ->where('courses.price', '<=',$to);
             });
         }
-        return $query->get();
+
+        $offSet = 0;
+        $limit  = \Config::get('fondnews.results_per_page');
+
+        // pagination
+        if(!empty($filter['pagination'])){
+            $offSet = $filter['pagination']['from'];
+            $limit  = $filter['pagination']['to'];
+        }
+
+        $resultsPerPage =  \Config::get('fondnews.results_per_page');
+
+        $query->skip($offSet);
+        $query->take($resultsPerPage);
+
+        $results  = $query->get(
+            [
+                'course_name','course_id','viewed','category_course.category_course_id','category_course.category_course_name','category_course_name','course_description_short','county_name','city_name'
+            ]);
+
+        return [
+            'results'     =>  $results,
+            'pagination'  => [
+                                'from' => $limit,
+                                'to'   => $limit + $resultsPerPage
+                             ],
+            'hasNext'     => count($results) == $resultsPerPage,
+            'count'       => count($results)
+        ];
     }
 }

@@ -6,7 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.2" />
     <meta name="format-detection" content="telephone=no" />
-    <meta name="keywords" content="Medic, Medical Center" />
+    <meta name="keywords" content="{{Config::get('fondnews.application_name')}}. {{Config::get('fondnews.application_description')}}" />
     <meta name="description" content="Responsive Medical Health Template" />
     <link href='//fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
@@ -27,6 +27,7 @@
 </head>
 
 <body>
+    <div class="loading">Loading&#8230;</div>
     <div class="site_container">
         <div class="header_top_bar_container clearfix style_4">
             <div class="header_top_bar">

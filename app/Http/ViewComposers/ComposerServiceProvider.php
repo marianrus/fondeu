@@ -18,6 +18,7 @@ class ComposerServiceProvider extends ServiceProvider
     {
         View()->composer('layouts.frontend.master-menu','App\Http\ViewComposers\MenuComposer');
         View()->composer('frontend.courses.highLightCourses','App\Http\ViewComposers\CoursesHighLightComposer');
+        View()->composer('*','App\Http\ViewComposers\ConfigServiceProvider');
     }
 
     public function register()

@@ -24,12 +24,12 @@
 
         FrontendHelper : {
 
-            fillPostBox : function(r){debugger;
-                var  liPost       =  $('<li>').attr('class', 'post');
+            fillPostBox : function(r){
+                var  liPost          =  $('<li>').attr('class', 'post');
                 var  divPostContent  =  $('<div>').attr('class','post_content');
                 var  h2WithNumber =  $('<h2>').attr('class','with_number');
                 var  aName        =  $('<a>',{
-                    href : 'posrasdada.com',
+                    href : 'curs/' + r.course_id,
                     title: r.course_name,
                     text : r.course_name
                 })
@@ -101,7 +101,13 @@
          * @param successCallback on success
          * @param errorCallback   on error
          */
-        ajaxCall : function(url, type,successCallback,errorCallback,data){
+        ajaxCall : function(url, type,successCallback,errorCallback,data, loading){
+
+            if(loading === true){
+                var beforeSendCallback = function(){$('.loading').show()}
+                var completeCallback   = function(){ setTimeout(function(){$('.loading').hide()},500)}
+            }
+
             if(!type){
                 type = 'GET'
             }
@@ -111,7 +117,9 @@
                 dataType : 'json',
                 data     : data,
                 success : successCallback,
-                error   : errorCallback
+                error   : errorCallback,
+                beforeSend : beforeSendCallback /*== undefined ? function(){} : beforeSendCallback*/,
+                complete   : completeCallback  /* || function(){}*/
             });
         }
     };

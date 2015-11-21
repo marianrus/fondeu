@@ -19,10 +19,11 @@ class CoursesController extends Controller
      */
     public function index()
     {
+        $course = new Course();
         return view('frontend.courses.index',[
-                'courses' => Course::getAllCourses(),
                 'categories' => CourseCategory::all(),
-                'counties'  => \DB::table('county')->orderBy('county_name')->get()
+                'counties'   => \DB::table('county')->orderBy('county_name')->get(),
+                'courses'    => $course->filterCourses()['results']
             ]
         );
     }
@@ -99,6 +100,7 @@ class CoursesController extends Controller
     }
     public function filterCourses(Request $request)
     {
-        return json_encode(Course::filterCourses($request->all()));
+        $course = new Course();
+        return json_encode($course->filterCourses($request->all()));
     }
 }
