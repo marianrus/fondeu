@@ -68,7 +68,7 @@
                     <div class="panel-collapse collapse in">
                         <div class="panel-body">
                             <select id="county" name="category" class="form-control ajax">
-                                <option >Toate</option>
+                                <option value="0">Toate</option>
                                 @foreach($counties as $county)
                                 <option value="{{$county->county_id}}">{{$county->county_name}}</option>
                                 @endforeach

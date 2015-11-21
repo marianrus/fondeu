@@ -90,20 +90,22 @@ class Course extends Model
             $where['courses.category_course_id'] = $filter['category'];
         }
 
-        if(!empty($filter['county']) && $filter['county'] != 'Toate'){
+        if(!empty($filter['county'])){
             $where['courses.county_id'] = $filter['county'];
         }
+
         if(!empty($filter['city'])){
             $where['courses.city_id'] = $filter['city'];
         }
 
-        $query =  self::find(10)
+        $query =  \DB::table('courses')
             ->join('category_course','category_course.category_course_id', '=','courses.category_course_id')
             ->join('partner','partner.partner_id', '=','courses.partner_id')
             ->join('city','city.city_id', '=','courses.city_id')
             ->join('county','county.county_id', '=','courses.county_id');
 
         $query->whereRaw("1 = 1");
+        $query->where($where);
 
         if(!empty($filter['query_string'])){
             $qS = $filter['query_string'];

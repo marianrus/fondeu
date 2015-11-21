@@ -1496,24 +1496,26 @@ jQuery(document).ready(function($){
         };
     };
 
+    var timeout;
     $(window).unbind('scroll');
     $(window).on('scroll', function(){
+
         var documentHeight  = parseFloat($(document).height());
         var windowHeight    = parseFloat($(window).height());
         var diff = (documentHeight - windowHeight) / 2;
 
-        console.log("window scroll => "+ $(window).scrollTop() +" diff=>"+diff);
         if(($(window).scrollTop() >= diff) && hasNext()){
-            console.log($(window).scrollTop() >  diff)
-            console.log('send');
-            makeFilterRequest(getFiltersData(), true);
+//            timeout = setTimeout(function(){
+                makeFilterRequest(getFiltersData(), true);
+//            },50)
         }
     });
 
 
     function resetPaginationDom()
     {
-        setPaginateDom(config.results_per_page, config.results_per_page *2);
+//        setPaginateDom(config.results_per_page, config.results_per_page *2);
+        setPaginateDom(0, config.results_per_page);
     }
 
     function setHasNext(hasNext, count)
@@ -1538,7 +1540,7 @@ jQuery(document).ready(function($){
     }
 
     function makeFilterRequest(filters, append){
-        console.trace();
+//        resetPaginationDom();
         App.Helper.ajaxCall(
             '/filter',
             'POST',

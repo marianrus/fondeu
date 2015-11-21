@@ -19,31 +19,31 @@ class CoursesInsert extends Seeder
             '2 months',
             '5 months',
         ];
-        DB::statement('ALTER TABLE courses AUTO_INCREMENT = 1');
+        \DB::statement('ALTER TABLE courses AUTO_INCREMENT = 1');
 
-        for($i=0; $i < 50*3; $i++)
+
+
+        for($i=0; $i < 300; $i++)
         {
             $description = $this->courseDescription() ;
-            try{
+                $countyId = array_rand(\App\County::getCountyIds());
+                $cityId = \App\City::getRandomCity($countyId);
                 DB::table('courses')->insert([
                     'course_name'           => 'Curs nr.' . $i,
                     'course_description'    => $description ?: 'asdadsadada',
                     'course_description_short' => substr($description,0,300) .'...',
                     'course_from'           => date('Y-m-d'),
                     'course_to'             => date('Y-m-d'),
-                    'duration'              => $durations[rand(0,count($durations))],
-                    'city_id'               => rand(1,10000),
-                    'county_id'             => rand(1,40),
-                    'partner_id'            => rand(0,10),
+                    'duration'              => array_rand($durations),
+                    'city_id'               => $cityId,
+                    'county_id'             => $countyId ?: 10,
+                    'partner_id'            => rand(1,9),
                     'viewed'                => rand(0,1000),
                     'course_on_site'        => rand(0,1),
                     'is_paid'               => rand(0,1),
                     'category_course_id'    => rand(1,5),
                     'price'                 => rand(200, 1500)
                 ]);
-            }catch (Exception $e){
-
-            }
         }
     }
 
