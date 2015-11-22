@@ -116,10 +116,12 @@ class Course extends Model
             $from = $filter['price']['from'];
             $to   = $filter['price']['to'];
             $query->where($where);
-            $query->orWhere(function($q) use($from, $to,$where){
-                $q  ->where('courses.price', '>=',$from)
-                    ->where('courses.price', '<=',$to);
-            });
+//            $query->orWhere(function($q) use($from, $to,$where){
+//                $q  ->where('courses.price', '>=',$from)
+//                    ->where('courses.price', '<=',$to);
+//            });
+            $query->where('courses.price', '>=',$from)
+                ->where('courses.price', '<=',$to);
         }
 
         $offSet = 0;

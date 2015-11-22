@@ -29,12 +29,11 @@
 
 <br/>
 
-<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<!--<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>-->
 
 <!--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>-->
 <div class="row">
     <div class="column column_1_3 page_margin_top">
-
         <div class="col-lg-12" id="secondary">
             <div class="panel-group-ba" id="filters">
                 <div class="panel panel-default">
@@ -117,7 +116,7 @@
                                     <input class="form-control center_align pull-left number col-md-4"
                                            type="text"
                                            placeholder="Pana la"
-                                           value="1000"
+                                           value="2000"
                                            id="price_to">
                                 </div>
                             </div>
@@ -187,6 +186,7 @@
         </div>
     </div>
     @stop
+
 
     @section('right-sidebar')
     <div class="column column_2_3">

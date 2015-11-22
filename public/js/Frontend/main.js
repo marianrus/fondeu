@@ -1460,7 +1460,7 @@ jQuery(document).ready(function($){
                 $('#cities option').remove();
                 $('<option>',{
                         value : 0,
-                        text  : ''
+                        text  : 'Toate'
                     }
                 ).appendTo('#cities');
                 $.each(r, function(key,val){
@@ -1478,8 +1478,6 @@ jQuery(document).ready(function($){
         );
     });
 
-
-
     function getFiltersData(){
         return  {
             'category' :  $('#category').val(),
@@ -1496,25 +1494,27 @@ jQuery(document).ready(function($){
         };
     };
 
-    var timeout;
+    var throttle = 0;
     $(window).unbind('scroll');
     $(window).on('scroll', function(){
-
         var documentHeight  = parseFloat($(document).height());
         var windowHeight    = parseFloat($(window).height());
         var diff = (documentHeight - windowHeight) / 2;
 
         if(($(window).scrollTop() >= diff) && hasNext()){
-//            timeout = setTimeout(function(){
-                makeFilterRequest(getFiltersData(), true);
-//            },50)
-        }
+            if(throttle == 0){
+                throttle = 1;
+                setTimeout(function(){
+                    makeFilterRequest(getFiltersData(), true);
+                    throttle = 0;
+                },1000);
+            }
+         }
     });
 
 
     function resetPaginationDom()
     {
-//        setPaginateDom(config.results_per_page, config.results_per_page *2);
         setPaginateDom(0, config.results_per_page);
     }
 
@@ -1540,23 +1540,32 @@ jQuery(document).ready(function($){
     }
 
     function makeFilterRequest(filters, append){
-//        resetPaginationDom();
+        var element = $('.column_2_2');
+
         App.Helper.ajaxCall(
             '/filter',
             'POST',
             function(response){
-
                 setPaginateDom(response.pagination.from, response.pagination.to);
                 setHasNext(response.hasNext,response.count);
                 if(!append){
-                    $('.column_2_2').empty();
+                    element.empty();
                 }
+
+                if(!response.count && !append){
+                    element.append(getMessage("Ne pare rau, nu s-au gasit cursuri dupa criteriile selectate."));
+                }
+
+                if(!response.count && append){
+                    element.append(getMessage("End of road"))
+                }
+
                 $.each(response.results,function(k,r){
-                    $('.column_2_2').append(App.Helper.FrontendHelper.fillPostBox(r));
+                    element.append(App.Helper.FrontendHelper.fillPostBox(r));
                 })
             },
             function(e){
-                alert('error');
+                element.append(getMessage("S-a produs o eroare"));
             },
             filters,
             true
@@ -1584,5 +1593,27 @@ jQuery(document).ready(function($){
         resetPaginationDom();
         makeFilterRequest(getFiltersData());
     });
+
+    function getMessage(message)
+    {
+        return $('<li></li>',{
+            class : 'not-found post'
+        }).append(
+                 $('<div></div>',{
+                     class : "post-content"
+                 }).append(
+                         $('<h2>',{
+                             text : 'OOops'
+                         })
+                     ).append($('<p></p>',{
+                         class : 'course-description',
+                         text  : message
+                     }))
+            )
+    }
+    function removeNotFoundMessage()
+    {
+        $('.not-found').remove();
+    }
 
 });
