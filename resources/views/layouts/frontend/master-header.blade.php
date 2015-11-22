@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.2" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="keywords" content="{{Config::get('fondnews.application_name')}}. {{Config::get('fondnews.application_description')}}" />
-    <meta name="description" content="Responsive Medical Health Template" />
+    <meta name="description" content="{{Config::get('fondnews.application_description')}}" />
     <link href='//fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ URL::asset('css/Frontend/reset.css') }}"/>
