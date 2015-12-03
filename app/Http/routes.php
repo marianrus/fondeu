@@ -31,6 +31,16 @@ Route::get('/categorie','CoursesCategoryController@index');
 Route::get('/categorie/{id}','CoursesCategoryController@show');
 
 
+/**
+ * Account
+ */
+Route::get('/cont','AccountController@index');
+
+/**
+ * Frontend auth
+ */
+Route::get('/autentificare','FrontendAuth\FrontendAuthController@getLogin');
+Route::post('/autentificare/login','FrontendAuth\FrontendAuthController@postLogin');
 
 /**
  * Article
@@ -44,6 +54,13 @@ Route::get('/articles/{id}','ArticleController@show');
  */
 
 Route::get('/helper/cities/{id}','HelperController@getCities');
+
+
+
+
+
+
+
 
 /**********************************************************
  *                      Backend                           *

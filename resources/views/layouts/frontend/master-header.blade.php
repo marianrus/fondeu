@@ -35,7 +35,7 @@
                     <input type="text" name="s" placeholder="Search..." value="Search..." class="search_input hint">
                     <input type="submit" class="search_submit" value="">
                 </form>
-                <ul class="social_icons clearfix">
+                <ul class="social_icons float-left">
                     <li>
                         <a target="_blank" href="http://facebook.com/QuanticaLabs" class="social_icon facebook" title="facebook">
                             &nbsp;
@@ -56,6 +56,28 @@
                             &nbsp;
                         </a>
                     </li>
+                </ul>
+
+                <ul class="login clearfix">
+                @if(Auth::check())
+                    <li class="dropdown">
+                        <a href="autentificare/" class="dropdown-toggle user" data-toggle="dropdown">
+                            <img src="images/people/guy-5.jpg" alt="Bill" class="img-circle" width="40" /> Bill <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="user-private-profile.html">Profile</a></li>
+                            <li><a href="user-private-messages.html">Messages</a></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul>
+                    </li>
+
+                @else
+                <li>
+                    <a href="/autentificare" class="account" title="account">
+                                Cont
+                    </a>
+                </li>
+                @endif
                 </ul>
                 <div class="latest_news_scrolling_list_container">
                     <ul>
@@ -93,4 +115,3 @@
                 <div class="placeholder">728 x 90</div>
             </div>
         </div>
-    @include('layouts.frontend.master-menu')

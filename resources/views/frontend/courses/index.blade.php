@@ -210,6 +210,7 @@
                             </ul>
                             <p class="course-description">{{$course->course_description_short}}</p>
                             <p class="pull-left"><span class="glyphicon glyphicon-map-marker">{{$course->county_name}}, {{$course->city_name}}</span></p>
+<!--                            <p class="pull-left"><img src="../../images/icons/other/map_pointer.png" ><span class="pull-left">{{$course->county_name}}, {{$course->city_name}}</span></p>-->
                             <a class="read_more" href="/curs/{{$course->course_id}}" title="Read morzze"><span class="arrow"></span><span>Mai mult</span></a>
                         </div>
                     </li>
