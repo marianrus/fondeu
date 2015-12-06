@@ -41,6 +41,7 @@ Route::get('/cont','AccountController@index');
  */
 Route::get('/autentificare','FrontendAuth\FrontendAuthController@getLogin');
 Route::post('/autentificare/login','FrontendAuth\FrontendAuthController@postLogin');
+Route::get('/autentificare/logout','FrontendAuth\FrontendAuthController@getLogout');
 
 /**
  * Article
@@ -54,10 +55,9 @@ Route::get('/articles/{id}','ArticleController@show');
  */
 
 Route::get('/helper/cities/{id}','HelperController@getCities');
-
-
-
-
+Route::get('/helper/counties','HelperController@getCounties');
+Route::get('/helper/cities','HelperController@getCitiesByName');
+//Route::get('/helper/counties','HelperController@getCounties');
 
 
 

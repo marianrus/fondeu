@@ -5008,3 +5008,113 @@ table {
     margin-bottom: 20px !important;
     clear: both;
 }
+.btn-light-blue {
+    background-color: #7c9bab;
+    border-color: #6c8fa1;
+    color: #ffffff;
+}
+.btn {
+    transition: all 0.3s ease 0s !important;
+}
+.btn-green {
+    background-color: #1FBBA6;
+    border-color: #1ba593;
+    color: #ffffff;
+}
+.btn-red {
+    background-color: #e66b6b;
+    border-color: #e25555;
+    color: #ffffff;
+}
+#courses-add-panel{
+    display:none;
+}
+/*.form-group .select2-select {*/
+    /*position: relative;*/
+    /*z-index: 2;*/
+    /*float: left;*/
+    /*width: 100%;*/
+    /*margin-bottom: 0;*/
+    /*display: table;*/
+    /*table-layout: fixed;*/
+/*}*/
+
+.form-group {
+    position: relative;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    font-weight: normal;
+    color: #858585;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+textarea, select, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+    background-color: #FFFFFF;
+    border: 1px solid #E6E8E8;
+    border-radius: 0 0 0 0 !important;
+    color: #8B91A0;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.2;
+    padding: 5px 4px;
+    transition-duration: 0.1s;
+    box-shadow: none !important;
+    -webkit-transition: 300ms ease-in-out;
+    -moz-transition: 300ms ease-in-out;
+    -ms-transition: 300ms ease-in-out;
+    -o-transition: 300ms ease-in-out;
+    transition: 300ms ease-in-out;
+}
+.form-control.select2-container {
+    padding: 0 !important;
+    box-shadow: none;
+    border: none;
+}
+select.form-control {
+    background-color: #FFFFFF;
+    border: 1px solid #D5D5D5;
+    border-radius: 0 0 0 0;
+    color: #858585;
+}
+select.form-control option {
+    padding: 3px 4px;
+}
+select option {
+    background-color: #ffffff !important;
+}
+.select2-container input{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+label {
+    font-weight: normal;
+    color: #858585;
+}
+.select2-container .select2-choice {
+    background-image: none;
+    border: 1px solid #e6e8e8;
+    border-radius: 2px;
+    height: 35px;
+    padding: 3px 9px;
+    transition: border 0.2s linear 0s;
+}
+.select2-container .select2-choice .select2-arrow {
+    background: none repeat scroll 0 0 transparent;
+    border-left: 0 none;
+}
+
+.select2-container .select2-choice .select2-arrow b {
+    background: none;
+}
+.select2-container .select2-choice .select2-arrow {
+    background: none repeat scroll 0 0 transparent;
+    border-left: 0 none;
+}

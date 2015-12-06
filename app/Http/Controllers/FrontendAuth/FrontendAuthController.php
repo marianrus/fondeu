@@ -28,6 +28,7 @@ class FrontendAuthController extends Controller
     protected $username = 'username';
 
     protected $redirectPath = '/cont';
+//    protected $redirectRoute = '/autentificare';
 
     /**
      * Create a new authentication controller instance.

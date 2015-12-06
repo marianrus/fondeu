@@ -257,6 +257,15 @@
         <script src="{{ URL::asset('js/Dashboard/app.js') }}"></script>
         <script src="{{ URL::asset('js/Frontend/main.js') }}"></script>
         <script src="{{ URL::asset('js/Dashboard/bootstrap.min.js') }}"></script>
+        <script src="{{ URL::asset('js/Frontend/jquery.pulsate.min.js') }}"></script>
+        <script src="{{ URL::asset('js/Frontend/bootstrap-modal/js/bootstrap-modal.js') }}"></script>
+        <script src="{{ URL::asset('js/Frontend/bootstrap-modal/js/bootstrap-modalmanager.js') }}"></script>
+        <script src="{{ URL::asset('js/Frontend/jquery.pulsate.min.js') }}"></script>
+        <script src="{{ URL::asset('js/scound-main.js') }}"></script>
+        <script src="{{ URL::asset('plugins/select2/select2.min.js') }}"></script>
+        <script src="{{ URL::asset('plugins/tinymce/tinymce.min.js') }}"></script>
+        <script src="{{ URL::asset('plugins/datepicker/js/bootstrap-datepicker.js') }}"></script>
+        <script src="{{ URL::asset('plugins/bootstrap-switch/dist/js/bootstrap-switch.min.js') }}"></script>
         <script>
             var config = <?php echo json_encode($config) ?>;
         </script>

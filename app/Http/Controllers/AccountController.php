@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
+use App\Course;
+use App\CourseCategory;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -15,7 +18,10 @@ class AccountController extends Controller
      */
     public function index()
     {
-        return view('frontend.account.index');
+        return view('frontend.account.index',[
+                    'courses' => Course::all()->take(5),
+                    'categories' => CourseCategory::all()
+        ]);
     }
 
     /**

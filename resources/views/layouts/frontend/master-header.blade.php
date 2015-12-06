@@ -19,8 +19,14 @@
     <link rel="stylesheet" href="{{ URL::asset('css/Frontend/animations.css')}}"/>
     <link rel="stylesheet" href="{{ URL::asset('css/Frontend/responsive.css')}}"/>
     <link rel="stylesheet" href="{{ URL::asset('css/Frontend/odometer-theme-default.css')}}" />
-    <link rel="stylesheet" href="{{ URL::asset('css/Frontend/slider.css')}}" />
+    <link rel="stylesheet" href="{{ URL::asset('js/Frontend/bootstrap-modal/css/bootstrap-modal.css')}}" />
+    <link rel="stylesheet" href="{{ URL::asset('js/Frontend/bootstrap-modal/css/bootstrap-modal-bs3patch.css')}}" />
     <link rel="stylesheet" href="{{ URL::asset('css/Dashboard/bootstrap.min.css')}}" />
+    <link rel="stylesheet" href="{{ URL::asset('plugins/select2/select2.css')}}" />
+    <link rel="stylesheet" href="{{ URL::asset('plugins/select2/bootstrap-select2.css')}}" />
+    <link rel="stylesheet" href="{{ URL::asset('plugins/datepicker/css/datepicker.css')}}" />
+    <link rel="stylesheet" href="{{ URL::asset('plugins/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css')}}" />
+    <link rel="stylesheet" href="{{ URL::asset('plugins/bootstrap-social-buttons/bootstrap-social.css')}}" />
     <link rel="shortcut icon" href="images/favicon.ico">
 <!--    <link media="all" type="text/css" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">-->
     <link media="all" type="text/css" rel="stylesheet" href="http://brick.a.ssl.fastly.net/Source+Sans+Pro:300,400,400i,600/Open+Sans:300,400,600,700">
@@ -65,9 +71,9 @@
                             <img src="images/people/guy-5.jpg" alt="Bill" class="img-circle" width="40" /> Bill <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="user-private-profile.html">Profile</a></li>
+                            <li><a href="/cont">Profil</a></li>
                             <li><a href="user-private-messages.html">Messages</a></li>
-                            <li><a href="login.html">Logout</a></li>
+                            <li><a href="/autentificare/logout">Iesire</a></li>
                         </ul>
                     </li>
 

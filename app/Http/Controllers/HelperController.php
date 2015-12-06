@@ -40,6 +40,22 @@ class HelperController extends Controller
     {
         return City::where('county_id','=',$countyId)->orderBy('city_name')->get(['city_name','city_id']);
     }
+    public function getCitiesByName()
+    {
+        $cityName  = $_GET['city_name'];
+        $countyId  = $_GET['county_id'];
+        return City::where('county_id','=',$countyId)
+                            ->where('city_name', 'LIKE', $cityName.'%')
+                            ->orderBy('city_name')
+                            ->get(['city_name','city_id']);
+    }
+
+    public function getCounties()
+    {
+        $county = $_GET['county'];
+        return County::where('county_name','LIKE', $county.'%')->orderBy('county_name')->get(['county_id','county_name']);
+//        return County::all();
+    }
 
     /**
      * Show the form for editing the specified resource.
