@@ -4824,9 +4824,9 @@ table {
     outline: 0 !important;
     text-decoration: none !important;
 }
-.tabbable a {
-     background-color: transparent;
- }
+/*.tabbable a {*/
+     /*background-color: transparent;*/
+ /*}*/
 
 .tabbable p {
     display: block;
@@ -5117,4 +5117,1221 @@ label {
 .select2-container .select2-choice .select2-arrow {
     background: none repeat scroll 0 0 transparent;
     border-left: 0 none;
+}
+.tabbable input {
+    background-color: #FFFFFF;
+    border: 1px solid #E6E8E8;
+    border-radius: 0 0 0 0 !important;
+    color: #8B91A0;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.2;
+    padding: 5px 4px;
+    transition-duration: 0.1s;
+    box-shadow: none !important;
+    -webkit-transition: 300ms ease-in-out;
+    -moz-transition: 300ms ease-in-out;
+    -ms-transition: 300ms ease-in-out;
+    -o-transition: 300ms ease-in-out;
+    transition: 300ms ease-in-out;
+}
+
+.tabbable textarea:focus, .tabbable select:focus, .tabbable input:focus{
+    box-shadow: none !important;
+    border-color: #eeeeee !important;
+    background-color: #F8F8F8 !important;
+}
+.no-display{
+    display: none;
+}
+.social-icons ul {
+    list-style: none;
+    margin: 0 0 -1px 0;
+    padding: 0;
+}
+/* line 769, ../sass/partials/_buttons.scss */
+.social-icons ul li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    overflow: hidden;
+}
+/* line 775, ../sass/partials/_buttons.scss */
+.social-icons ul li a {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    display: block;
+    height: 80px;
+    opacity: 0.6;
+    text-indent: -9999px;
+    transition: all 0.2s ease 0s;
+    width: 40px;
+    top: 0;
+    font-size: 16px;
+    position: relative;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+/* line 788, ../sass/partials/_buttons.scss */
+.social-icons ul li a:hover {
+    top: -40px;
+}
+/* line 791, ../sass/partials/_buttons.scss */
+.social-icons ul li a:before {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    font-family: FontAwesome;
+    text-indent: 0;
+    line-height: 40px;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: #999999;
+}
+/* line 803, ../sass/partials/_buttons.scss */
+.social-icons ul li a:after {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    font-family: FontAwesome;
+    text-indent: 0;
+    line-height: 40px;
+    top: 40px;
+    left: 0;
+    text-align: center;
+    color: #FFFFFF;
+}
+/* line 817, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-twitter a:before, .social-icons ul li.social-twitter a:after {
+    content: "\f099";
+}
+/* line 820, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-twitter a:after {
+    background: #48C4D2;
+}
+/* line 825, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-dribbble a:before, .social-icons ul li.social-dribbble a:after {
+    content: "\f17d";
+}
+/* line 828, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-dribbble a:after {
+    background: #EF5B92;
+}
+/* line 833, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-facebook a:before, .social-icons ul li.social-facebook a:after {
+    content: "\f09a";
+}
+/* line 836, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-facebook a:after {
+    background: #3B5998;
+}
+/* line 841, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-google a:before, .social-icons ul li.social-google a:after {
+    content: "\f0d5";
+}
+/* line 844, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-google a:after {
+    background: #DD4B39;
+}
+/* line 849, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-linkedin a:before, .social-icons ul li.social-linkedin a:after {
+    content: "\f0e1";
+}
+/* line 852, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-linkedin a:after {
+    background: #71B2D0;
+}
+/* line 857, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-youtube a:before, .social-icons ul li.social-youtube a:after {
+    content: "\f167";
+}
+/* line 860, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-youtube a:after {
+    background: #F45750;
+}
+/* line 865, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-rss a:before, .social-icons ul li.social-rss a:after {
+    content: "\f09e";
+}
+/* line 868, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-rss a:after {
+    background: #FE9900;
+}
+/* line 873, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-behance a:before, .social-icons ul li.social-behance a:after {
+    content: "\f1b4";
+}
+/* line 876, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-behance a:after {
+    background: #5EB5FB;
+}
+/* line 881, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-dropbox a:before, .social-icons ul li.social-dropbox a:after {
+    content: "\f16b";
+}
+/* line 884, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-dropbox a:after {
+    background: #85BEEC;
+}
+/* line 889, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-github a:before, .social-icons ul li.social-github a:after {
+    content: "\f09b";
+}
+/* line 892, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-github a:after {
+    background: #94A5B0;
+}
+/* line 897, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-skype a:before, .social-icons ul li.social-skype a:after {
+    content: "\f17e";
+}
+/* line 900, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-skype a:after {
+    background: #70CCEF;
+}
+/* line 905, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-spotify a:before, .social-icons ul li.social-spotify a:after {
+    content: "\f1bc";
+}
+/* line 908, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-spotify a:after {
+    background: #8BD05A;
+}
+/* line 913, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-stumbleupon a:before, .social-icons ul li.social-stumbleupon a:after {
+    content: "\f1a4";
+}
+/* line 916, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-stumbleupon a:after {
+    background: #F08066;
+}
+/* line 921, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-tumblr a:before, .social-icons ul li.social-tumblr a:after {
+    content: "\f173";
+}
+/* line 924, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-tumblr a:after {
+    background: #85A5C3;
+}
+/* line 929, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-vimeo a:before, .social-icons ul li.social-vimeo a:after {
+    content: "\f194";
+}
+/* line 932, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-vimeo a:after {
+    background: #7C99A8;
+}
+/* line 937, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-wordpress a:before, .social-icons ul li.social-wordpress a:after {
+    content: "\f19a";
+}
+/* line 940, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-wordpress a:after {
+    background: #649EB9;
+}
+/* line 945, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-xing a:before, .social-icons ul li.social-xing a:after {
+    content: "\f168";
+}
+/* line 948, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-xing a:after {
+    background: #4F9394;
+}
+/* line 953, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-yahoo a:before, .social-icons ul li.social-yahoo a:after {
+    content: "\f19e";
+}
+/* line 956, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-yahoo a:after {
+    background: #C38DCF;
+}
+/* line 961, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-vk a:before, .social-icons ul li.social-vk a:after {
+    content: "\f189";
+}
+/* line 964, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-vk a:after {
+    background: #708FAC;
+}
+/* line 969, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-instagram a:before, .social-icons ul li.social-instagram a:after {
+    content: "\f16d";
+}
+/* line 972, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-instagram a:after {
+    background: #CBAA97;
+}
+/* line 977, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-reddit a:before, .social-icons ul li.social-reddit a:after {
+    content: "\f1a1";
+}
+/* line 980, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-reddit a:after {
+    background: #FF7A52;
+}
+/* line 985, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-flickr a:before, .social-icons ul li.social-flickr a:after {
+    content: "\f16e";
+}
+/* line 988, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-flickr a:after {
+    background: #FF4DA9;
+}
+/* line 993, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-foursquare a:before, .social-icons ul li.social-foursquare a:after {
+    content: "\f180";
+}
+/* line 996, ../sass/partials/_buttons.scss */
+.social-icons ul li.social-foursquare a:after {
+    background: #6FCCF4;
+}
+span.input-icon, span.input-help {
+    display: block;
+    position: relative;
+}
+
+/* line 65, ../sass/partials/_form-elements.scss */
+.input-icon > input {
+    padding-left: 25px;
+    padding-right: 6px;
+}
+
+/* line 69, ../sass/partials/_form-elements.scss */
+.input-icon.input-icon-right > input {
+    padding-left: 6px;
+    padding-right: 25px;
+}
+
+/* line 73, ../sass/partials/_form-elements.scss */
+span.input-help > input {
+    padding-left: 30px;
+    padding-right: 6px;
+}
+
+/* line 77, ../sass/partials/_form-elements.scss */
+.input-icon > [class*="fa-"], .input-icon > [class*="clip-"] {
+    bottom: 0;
+    color: #909090;
+    display: inline-block;
+    font-size: 14px;
+    left: 5px;
+    line-height: 35px;
+    padding: 0 3px;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+/* line 90, ../sass/partials/_form-elements.scss */
+.input-icon.input-icon-right > [class*="fa-"], .input-icon.input-icon-right > [class*="clip-"] {
+    left: auto;
+    right: 4px;
+}
+
+/* line 94, ../sass/partials/_form-elements.scss */
+.input-icon > input:focus + [class*="fa-"], .input-icon > input:focus + [class*="clip-"] {
+    color: #557799;
+}
+.user-left td .edit-user-info {
+    visibility: hidden;
+}
+
+/* line 15, ../sass/partials/_user-profile.scss */
+.user-left tr:hover .edit-user-info {
+    visibility: visible;
+}
+.btn-light-blue {
+    background-color: #7c9bab;
+    border-color: #6c8fa1;
+    color: #ffffff;
+}
+.btn-green:hover, .btn-green:focus, .btn-green:active, .btn-green.active {
+    background-color: #1ba593;
+    border-color: #188f7f;
+    color: #ffffff;
+}
+.btn-green:hover, .btn-green:focus, .btn-green:active, .btn-green.active {
+    background-color: #1ba593;
+    border-color: #188f7f;
+    color: #ffffff;
+}
+/* line 154, ../sass/partials/_buttons.scss */
+.btn-green.disabled:hover, .btn-green.disabled:focus, .btn-green.disabled:active, .btn-green.disabled.active, .btn-green[disabled]:hover, .btn-green[disabled]:focus, .btn-green[disabled]:active, .btn-green[disabled].active, fieldset[disabled] .btn-green:hover, fieldset[disabled] .btn-green:focus, fieldset[disabled] .btn-green:active, fieldset[disabled] .btn-green.active {
+    background-color: #f5fdfc;
+    border-color: #dffaf6;
+    color: #ffffff;
+}
+/* line 159, ../sass/partials/_buttons.scss */
+.btn-green .caret {
+    border-top-color: #ffffff;
+}
+/* line 163, ../sass/partials/_buttons.scss */
+.dropup .btn-green .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 168, ../sass/partials/_buttons.scss */
+.btn-light-green {
+    background-color: #30ddc6;
+    border-color: #23d1b9;
+    color: #ffffff;
+}
+/* line 172, ../sass/partials/_buttons.scss */
+.btn-light-green:hover, .btn-light-green:focus, .btn-light-green:active, .btn-light-green.active {
+    background-color: #23d1b9;
+    border-color: #1fbba6;
+    color: #ffffff;
+}
+/* line 177, ../sass/partials/_buttons.scss */
+.btn-light-green.disabled:hover, .btn-light-green.disabled:focus, .btn-light-green.disabled:active, .btn-light-green.disabled.active, .btn-light-green[disabled]:hover, .btn-light-green[disabled]:focus, .btn-light-green[disabled]:active, .btn-light-green[disabled].active, fieldset[disabled] .btn-light-green:hover, fieldset[disabled] .btn-light-green:focus, fieldset[disabled] .btn-light-green:active, fieldset[disabled] .btn-light-green.active {
+    background-color: white;
+    border-color: white;
+    color: #ffffff;
+}
+/* line 182, ../sass/partials/_buttons.scss */
+.btn-light-green .caret {
+    border-top-color: #ffffff;
+}
+/* line 186, ../sass/partials/_buttons.scss */
+.dropup .btn-light-green .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 191, ../sass/partials/_buttons.scss */
+.btn-dark-green {
+    background-color: #188f7f;
+    border-color: #14796c;
+    color: #ffffff;
+}
+/* line 195, ../sass/partials/_buttons.scss */
+.btn-dark-green:hover, .btn-dark-green:focus, .btn-dark-green:active, .btn-dark-green.active {
+    background-color: #14796c;
+    border-color: #106458;
+    color: #ffffff;
+}
+/* line 200, ../sass/partials/_buttons.scss */
+.btn-dark-green.disabled:hover, .btn-dark-green.disabled:focus, .btn-dark-green.disabled:active, .btn-dark-green.disabled.active, .btn-dark-green[disabled]:hover, .btn-dark-green[disabled]:focus, .btn-dark-green[disabled]:active, .btn-dark-green[disabled].active, fieldset[disabled] .btn-dark-green:hover, fieldset[disabled] .btn-dark-green:focus, fieldset[disabled] .btn-dark-green:active, fieldset[disabled] .btn-dark-green.active {
+    background-color: #c9f6f0;
+    border-color: #b4f2ea;
+    color: #ffffff;
+}
+/* line 205, ../sass/partials/_buttons.scss */
+.btn-dark-green .caret {
+    border-top-color: #ffffff;
+}
+/* line 209, ../sass/partials/_buttons.scss */
+.dropup .btn-dark-green .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 214, ../sass/partials/_buttons.scss */
+.btn-orange {
+    background-color: #F58A5C;
+    border-color: #f47944;
+    color: #ffffff;
+}
+/* line 218, ../sass/partials/_buttons.scss */
+.btn-orange:hover, .btn-orange:focus, .btn-orange:active, .btn-orange.active {
+    background-color: #f47944;
+    border-color: #f2682c;
+    color: #ffffff;
+}
+/* line 223, ../sass/partials/_buttons.scss */
+.btn-orange.disabled:hover, .btn-orange.disabled:focus, .btn-orange.disabled:active, .btn-orange.disabled.active, .btn-orange[disabled]:hover, .btn-orange[disabled]:focus, .btn-orange[disabled]:active, .btn-orange[disabled].active, fieldset[disabled] .btn-orange:hover, fieldset[disabled] .btn-orange:focus, fieldset[disabled] .btn-orange:active, fieldset[disabled] .btn-orange.active {
+    background-color: white;
+    border-color: white;
+    color: #ffffff;
+}
+/* line 228, ../sass/partials/_buttons.scss */
+.btn-orange .caret {
+    border-top-color: #ffffff;
+}
+/* line 232, ../sass/partials/_buttons.scss */
+.dropup .btn-orange .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 237, ../sass/partials/_buttons.scss */
+.btn-light-orange {
+    background-color: #f8ac8c;
+    border-color: #f69b74;
+    color: #ffffff;
+}
+/* line 241, ../sass/partials/_buttons.scss */
+.btn-light-orange:hover, .btn-light-orange:focus, .btn-light-orange:active, .btn-light-orange.active {
+    background-color: #f69b74;
+    border-color: #f58a5c;
+    color: #ffffff;
+}
+/* line 246, ../sass/partials/_buttons.scss */
+.btn-light-orange.disabled:hover, .btn-light-orange.disabled:focus, .btn-light-orange.disabled:active, .btn-light-orange.disabled.active, .btn-light-orange[disabled]:hover, .btn-light-orange[disabled]:focus, .btn-light-orange[disabled]:active, .btn-light-orange[disabled].active, fieldset[disabled] .btn-light-orange:hover, fieldset[disabled] .btn-light-orange:focus, fieldset[disabled] .btn-light-orange:active, fieldset[disabled] .btn-light-orange.active {
+    background-color: white;
+    border-color: white;
+    color: #ffffff;
+}
+/* line 251, ../sass/partials/_buttons.scss */
+.btn-light-orange .caret {
+    border-top-color: #ffffff;
+}
+/* line 255, ../sass/partials/_buttons.scss */
+.dropup .btn-light-orange .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 260, ../sass/partials/_buttons.scss */
+.btn-dark-orange {
+    background-color: #f2682c;
+    border-color: #f15614;
+    color: #ffffff;
+}
+/* line 264, ../sass/partials/_buttons.scss */
+.btn-dark-orange:hover, .btn-dark-orange:focus, .btn-dark-orange:active, .btn-dark-orange.active {
+    background-color: #f15614;
+    border-color: #dd4c0e;
+    color: #ffffff;
+}
+/* line 269, ../sass/partials/_buttons.scss */
+.btn-dark-orange.disabled:hover, .btn-dark-orange.disabled:focus, .btn-dark-orange.disabled:active, .btn-dark-orange.disabled.active, .btn-dark-orange[disabled]:hover, .btn-dark-orange[disabled]:focus, .btn-dark-orange[disabled]:active, .btn-dark-orange[disabled].active, fieldset[disabled] .btn-dark-orange:hover, fieldset[disabled] .btn-dark-orange:focus, fieldset[disabled] .btn-dark-orange:active, fieldset[disabled] .btn-dark-orange.active {
+    background-color: white;
+    border-color: white;
+    color: #ffffff;
+}
+/* line 274, ../sass/partials/_buttons.scss */
+.btn-dark-orange .caret {
+    border-top-color: #ffffff;
+}
+/* line 278, ../sass/partials/_buttons.scss */
+.dropup .btn-dark-orange .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 283, ../sass/partials/_buttons.scss */
+.btn-red {
+    background-color: #e66b6b;
+    border-color: #e25555;
+    color: #ffffff;
+}
+/* line 287, ../sass/partials/_buttons.scss */
+.btn-red:hover, .btn-red:focus, .btn-red:active, .btn-red.active {
+    background-color: #e25555;
+    border-color: #df3f3f;
+    color: #ffffff;
+}
+/* line 292, ../sass/partials/_buttons.scss */
+.btn-red.disabled:hover, .btn-red.disabled:focus, .btn-red.disabled:active, .btn-red.disabled.active, .btn-red[disabled]:hover, .btn-red[disabled]:focus, .btn-red[disabled]:active, .btn-red[disabled].active, fieldset[disabled] .btn-red:hover, fieldset[disabled] .btn-red:focus, fieldset[disabled] .btn-red:active, fieldset[disabled] .btn-red.active {
+    background-color: white;
+    border-color: white;
+    color: #ffffff;
+}
+/* line 297, ../sass/partials/_buttons.scss */
+.btn-red .caret {
+    border-top-color: #ffffff;
+}
+/* line 301, ../sass/partials/_buttons.scss */
+.dropup .btn-red .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 306, ../sass/partials/_buttons.scss */
+.btn-light-red {
+    background-color: #ed9797;
+    border-color: #ea8181;
+    color: #ffffff;
+}
+/* line 310, ../sass/partials/_buttons.scss */
+.btn-light-red:hover, .btn-light-red:focus, .btn-light-red:active, .btn-light-red.active {
+    background-color: #ea8181;
+    border-color: #e66b6b;
+    color: #ffffff;
+}
+/* line 315, ../sass/partials/_buttons.scss */
+.btn-light-red.disabled:hover, .btn-light-red.disabled:focus, .btn-light-red.disabled:active, .btn-light-red.disabled.active, .btn-light-red[disabled]:hover, .btn-light-red[disabled]:focus, .btn-light-red[disabled]:active, .btn-light-red[disabled].active, fieldset[disabled] .btn-light-red:hover, fieldset[disabled] .btn-light-red:focus, fieldset[disabled] .btn-light-red:active, fieldset[disabled] .btn-light-red.active {
+    background-color: white;
+    border-color: white;
+    color: #ffffff;
+}
+/* line 320, ../sass/partials/_buttons.scss */
+.btn-light-red .caret {
+    border-top-color: #ffffff;
+}
+/* line 324, ../sass/partials/_buttons.scss */
+.dropup .btn-light-red .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 329, ../sass/partials/_buttons.scss */
+.btn-dark-red {
+    background-color: #df3f3f;
+    border-color: #db2a2a;
+    color: #ffffff;
+}
+/* line 333, ../sass/partials/_buttons.scss */
+.btn-dark-red:hover, .btn-dark-red:focus, .btn-dark-red:active, .btn-dark-red.active {
+    background-color: #db2a2a;
+    border-color: #c92222;
+    color: #ffffff;
+}
+/* line 338, ../sass/partials/_buttons.scss */
+.btn-dark-red.disabled:hover, .btn-dark-red.disabled:focus, .btn-dark-red.disabled:active, .btn-dark-red.disabled.active, .btn-dark-red[disabled]:hover, .btn-dark-red[disabled]:focus, .btn-dark-red[disabled]:active, .btn-dark-red[disabled].active, fieldset[disabled] .btn-dark-red:hover, fieldset[disabled] .btn-dark-red:focus, fieldset[disabled] .btn-dark-red:active, fieldset[disabled] .btn-dark-red.active {
+    background-color: white;
+    border-color: white;
+    color: #ffffff;
+}
+/* line 343, ../sass/partials/_buttons.scss */
+.btn-dark-red .caret {
+    border-top-color: #ffffff;
+}
+/* line 347, ../sass/partials/_buttons.scss */
+.dropup .btn-dark-red .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 352, ../sass/partials/_buttons.scss */
+.btn-purple {
+    background-color: #804C75;
+    border-color: #704366;
+    color: #ffffff;
+}
+/* line 356, ../sass/partials/_buttons.scss */
+.btn-purple:hover, .btn-purple:focus, .btn-purple:active, .btn-purple.active {
+    background-color: #704366;
+    border-color: #603958;
+    color: #ffffff;
+}
+/* line 361, ../sass/partials/_buttons.scss */
+.btn-purple.disabled:hover, .btn-purple.disabled:focus, .btn-purple.disabled:active, .btn-purple.disabled.active, .btn-purple[disabled]:hover, .btn-purple[disabled]:focus, .btn-purple[disabled]:active, .btn-purple[disabled].active, fieldset[disabled] .btn-purple:hover, fieldset[disabled] .btn-purple:focus, fieldset[disabled] .btn-purple:active, fieldset[disabled] .btn-purple.active {
+    background-color: #f5eff4;
+    border-color: #ecdfe9;
+    color: #ffffff;
+}
+/* line 366, ../sass/partials/_buttons.scss */
+.btn-purple .caret {
+    border-top-color: #ffffff;
+}
+/* line 370, ../sass/partials/_buttons.scss */
+.dropup .btn-purple .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 375, ../sass/partials/_buttons.scss */
+.btn-light-purple {
+    background-color: #a05f92;
+    border-color: #905684;
+    color: #ffffff;
+}
+/* line 379, ../sass/partials/_buttons.scss */
+.btn-light-purple:hover, .btn-light-purple:focus, .btn-light-purple:active, .btn-light-purple.active {
+    background-color: #905684;
+    border-color: #804c75;
+    color: #ffffff;
+}
+/* line 384, ../sass/partials/_buttons.scss */
+.btn-light-purple.disabled:hover, .btn-light-purple.disabled:focus, .btn-light-purple.disabled:active, .btn-light-purple.disabled.active, .btn-light-purple[disabled]:hover, .btn-light-purple[disabled]:focus, .btn-light-purple[disabled]:active, .btn-light-purple[disabled].active, fieldset[disabled] .btn-light-purple:hover, fieldset[disabled] .btn-light-purple:focus, fieldset[disabled] .btn-light-purple:active, fieldset[disabled] .btn-light-purple.active {
+    background-color: white;
+    border-color: white;
+    color: #ffffff;
+}
+/* line 389, ../sass/partials/_buttons.scss */
+.btn-light-purple .caret {
+    border-top-color: #ffffff;
+}
+/* line 393, ../sass/partials/_buttons.scss */
+.dropup .btn-light-purple .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 398, ../sass/partials/_buttons.scss */
+.btn-dark-purple {
+    background-color: #603958;
+    border-color: #503049;
+    color: #ffffff;
+}
+/* line 402, ../sass/partials/_buttons.scss */
+.btn-dark-purple:hover, .btn-dark-purple:focus, .btn-dark-purple:active, .btn-dark-purple.active {
+    background-color: #503049;
+    border-color: #40263b;
+    color: #ffffff;
+}
+/* line 407, ../sass/partials/_buttons.scss */
+.btn-dark-purple.disabled:hover, .btn-dark-purple.disabled:focus, .btn-dark-purple.disabled:active, .btn-dark-purple.disabled.active, .btn-dark-purple[disabled]:hover, .btn-dark-purple[disabled]:focus, .btn-dark-purple[disabled]:active, .btn-dark-purple[disabled].active, fieldset[disabled] .btn-dark-purple:hover, fieldset[disabled] .btn-dark-purple:focus, fieldset[disabled] .btn-dark-purple:active, fieldset[disabled] .btn-dark-purple.active {
+    background-color: #e3cfde;
+    border-color: #d9bfd4;
+    color: #ffffff;
+}
+/* line 412, ../sass/partials/_buttons.scss */
+.btn-dark-purple .caret {
+    border-top-color: #ffffff;
+}
+/* line 416, ../sass/partials/_buttons.scss */
+.dropup .btn-dark-purple .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 421, ../sass/partials/_buttons.scss */
+.btn-beige {
+    background-color: #cc9;
+    border-color: #c3c488;
+    color: #ffffff;
+}
+/* line 425, ../sass/partials/_buttons.scss */
+.btn-beige:hover, .btn-beige:focus, .btn-beige:active, .btn-beige.active {
+    background-color: #c3c488;
+    border-color: #bbbb77;
+    color: #ffffff;
+}
+/* line 430, ../sass/partials/_buttons.scss */
+.btn-beige.disabled:hover, .btn-beige.disabled:focus, .btn-beige.disabled:active, .btn-beige.disabled.active, .btn-beige[disabled]:hover, .btn-beige[disabled]:focus, .btn-beige[disabled]:active, .btn-beige[disabled].active, fieldset[disabled] .btn-beige:hover, fieldset[disabled] .btn-beige:focus, fieldset[disabled] .btn-beige:active, fieldset[disabled] .btn-beige.active {
+    background-color: white;
+    border-color: white;
+    color: #ffffff;
+}
+/* line 435, ../sass/partials/_buttons.scss */
+.btn-beige .caret {
+    border-top-color: #ffffff;
+}
+/* line 439, ../sass/partials/_buttons.scss */
+.dropup .btn-beige .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 444, ../sass/partials/_buttons.scss */
+.btn-light-beige {
+    background-color: #d5d5aa;
+    border-color: #cccc99;
+    color: #ffffff;
+}
+/* line 448, ../sass/partials/_buttons.scss */
+.btn-light-beige:hover, .btn-light-beige:focus, .btn-light-beige:active, .btn-light-beige.active {
+    background-color: #cccc99;
+    border-color: #c3c488;
+    color: #ffffff;
+}
+/* line 453, ../sass/partials/_buttons.scss */
+.btn-light-beige.disabled:hover, .btn-light-beige.disabled:focus, .btn-light-beige.disabled:active, .btn-light-beige.disabled.active, .btn-light-beige[disabled]:hover, .btn-light-beige[disabled]:focus, .btn-light-beige[disabled]:active, .btn-light-beige[disabled].active, fieldset[disabled] .btn-light-beige:hover, fieldset[disabled] .btn-light-beige:focus, fieldset[disabled] .btn-light-beige:active, fieldset[disabled] .btn-light-beige.active {
+    background-color: white;
+    border-color: white;
+    color: #ffffff;
+}
+/* line 458, ../sass/partials/_buttons.scss */
+.btn-light-beige .caret {
+    border-top-color: #ffffff;
+}
+/* line 462, ../sass/partials/_buttons.scss */
+.dropup .btn-light-beige .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 467, ../sass/partials/_buttons.scss */
+.btn-dark-beige {
+    background-color: #bbbb77;
+    border-color: #b3b366;
+    color: #ffffff;
+}
+/* line 471, ../sass/partials/_buttons.scss */
+.btn-dark-beige:hover, .btn-dark-beige:focus, .btn-dark-beige:active, .btn-dark-beige.active {
+    background-color: #b3b366;
+    border-color: #aaaa55;
+    color: #ffffff;
+}
+/* line 476, ../sass/partials/_buttons.scss */
+.btn-dark-beige.disabled:hover, .btn-dark-beige.disabled:focus, .btn-dark-beige.disabled:active, .btn-dark-beige.disabled.active, .btn-dark-beige[disabled]:hover, .btn-dark-beige[disabled]:focus, .btn-dark-beige[disabled]:active, .btn-dark-beige[disabled].active, fieldset[disabled] .btn-dark-beige:hover, fieldset[disabled] .btn-dark-beige:focus, fieldset[disabled] .btn-dark-beige:active, fieldset[disabled] .btn-dark-beige.active {
+    background-color: white;
+    border-color: white;
+    color: #ffffff;
+}
+/* line 481, ../sass/partials/_buttons.scss */
+.btn-dark-beige .caret {
+    border-top-color: #ffffff;
+}
+/* line 485, ../sass/partials/_buttons.scss */
+.dropup .btn-dark-beige .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 490, ../sass/partials/_buttons.scss */
+.btn-yellow {
+    background-color: #FFB848;
+    border-color: #ffae2e;
+    color: #ffffff;
+}
+/* line 494, ../sass/partials/_buttons.scss */
+.btn-yellow:hover, .btn-yellow:focus, .btn-yellow:active, .btn-yellow.active {
+    background-color: #ffae2e;
+    border-color: #ffa415;
+    color: #ffffff;
+}
+/* line 499, ../sass/partials/_buttons.scss */
+.btn-yellow.disabled:hover, .btn-yellow.disabled:focus, .btn-yellow.disabled:active, .btn-yellow.disabled.active, .btn-yellow[disabled]:hover, .btn-yellow[disabled]:focus, .btn-yellow[disabled]:active, .btn-yellow[disabled].active, fieldset[disabled] .btn-yellow:hover, fieldset[disabled] .btn-yellow:focus, fieldset[disabled] .btn-yellow:active, fieldset[disabled] .btn-yellow.active {
+    background-color: white;
+    border-color: white;
+    color: #ffffff;
+}
+/* line 504, ../sass/partials/_buttons.scss */
+.btn-yellow .caret {
+    border-top-color: #ffffff;
+}
+/* line 508, ../sass/partials/_buttons.scss */
+.dropup .btn-yellow .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 513, ../sass/partials/_buttons.scss */
+.btn-light-yellow {
+    background-color: #ffcc7b;
+    border-color: #ffc261;
+    color: #ffffff;
+}
+/* line 517, ../sass/partials/_buttons.scss */
+.btn-light-yellow:hover, .btn-light-yellow:focus, .btn-light-yellow:active, .btn-light-yellow.active {
+    background-color: #ffc261;
+    border-color: #ffb848;
+    color: #ffffff;
+}
+/* line 522, ../sass/partials/_buttons.scss */
+.btn-light-yellow.disabled:hover, .btn-light-yellow.disabled:focus, .btn-light-yellow.disabled:active, .btn-light-yellow.disabled.active, .btn-light-yellow[disabled]:hover, .btn-light-yellow[disabled]:focus, .btn-light-yellow[disabled]:active, .btn-light-yellow[disabled].active, fieldset[disabled] .btn-light-yellow:hover, fieldset[disabled] .btn-light-yellow:focus, fieldset[disabled] .btn-light-yellow:active, fieldset[disabled] .btn-light-yellow.active {
+    background-color: white;
+    border-color: white;
+    color: #ffffff;
+}
+/* line 527, ../sass/partials/_buttons.scss */
+.btn-light-yellow .caret {
+    border-top-color: #ffffff;
+}
+/* line 531, ../sass/partials/_buttons.scss */
+.dropup .btn-light-yellow .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 536, ../sass/partials/_buttons.scss */
+.btn-dark-yellow {
+    background-color: #ffa415;
+    border-color: #fa9900;
+    color: #ffffff;
+}
+/* line 540, ../sass/partials/_buttons.scss */
+.btn-dark-yellow:hover, .btn-dark-yellow:focus, .btn-dark-yellow:active, .btn-dark-yellow.active {
+    background-color: #fa9900;
+    border-color: #e18a00;
+    color: #ffffff;
+}
+/* line 545, ../sass/partials/_buttons.scss */
+.btn-dark-yellow.disabled:hover, .btn-dark-yellow.disabled:focus, .btn-dark-yellow.disabled:active, .btn-dark-yellow.disabled.active, .btn-dark-yellow[disabled]:hover, .btn-dark-yellow[disabled]:focus, .btn-dark-yellow[disabled]:active, .btn-dark-yellow[disabled].active, fieldset[disabled] .btn-dark-yellow:hover, fieldset[disabled] .btn-dark-yellow:focus, fieldset[disabled] .btn-dark-yellow:active, fieldset[disabled] .btn-dark-yellow.active {
+    background-color: white;
+    border-color: white;
+    color: #ffffff;
+}
+/* line 550, ../sass/partials/_buttons.scss */
+.btn-dark-yellow .caret {
+    border-top-color: #ffffff;
+}
+/* line 554, ../sass/partials/_buttons.scss */
+.dropup .btn-dark-yellow .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 559, ../sass/partials/_buttons.scss */
+.btn-grey {
+    background-color: #8B91A0;
+    border-color: #7d8495;
+    color: #ffffff;
+}
+/* line 563, ../sass/partials/_buttons.scss */
+.btn-grey:hover, .btn-grey:focus, .btn-grey:active, .btn-grey.active {
+    background-color: #7d8495;
+    border-color: #707788;
+    color: #ffffff;
+}
+/* line 568, ../sass/partials/_buttons.scss */
+.btn-grey.disabled:hover, .btn-grey.disabled:focus, .btn-grey.disabled:active, .btn-grey.disabled.active, .btn-grey[disabled]:hover, .btn-grey[disabled]:focus, .btn-grey[disabled]:active, .btn-grey[disabled].active, fieldset[disabled] .btn-grey:hover, fieldset[disabled] .btn-grey:focus, fieldset[disabled] .btn-grey:active, fieldset[disabled] .btn-grey.active {
+    background-color: white;
+    border-color: white;
+    color: #ffffff;
+}
+/* line 573, ../sass/partials/_buttons.scss */
+.btn-grey .caret {
+    border-top-color: #ffffff;
+}
+/* line 577, ../sass/partials/_buttons.scss */
+.dropup .btn-grey .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 582, ../sass/partials/_buttons.scss */
+.btn-light-grey {
+    background-color: #a7acb7;
+    border-color: #999eab;
+    color: #ffffff;
+}
+/* line 586, ../sass/partials/_buttons.scss */
+.btn-light-grey:hover, .btn-light-grey:focus, .btn-light-grey:active, .btn-light-grey.active {
+    background-color: #999eab;
+    border-color: #8b91a0;
+    color: #ffffff;
+}
+/* line 591, ../sass/partials/_buttons.scss */
+.btn-light-grey.disabled:hover, .btn-light-grey.disabled:focus, .btn-light-grey.disabled:active, .btn-light-grey.disabled.active, .btn-light-grey[disabled]:hover, .btn-light-grey[disabled]:focus, .btn-light-grey[disabled]:active, .btn-light-grey[disabled].active, fieldset[disabled] .btn-light-grey:hover, fieldset[disabled] .btn-light-grey:focus, fieldset[disabled] .btn-light-grey:active, fieldset[disabled] .btn-light-grey.active {
+    background-color: white;
+    border-color: white;
+    color: #ffffff;
+}
+/* line 596, ../sass/partials/_buttons.scss */
+.btn-light-grey .caret {
+    border-top-color: #ffffff;
+}
+/* line 600, ../sass/partials/_buttons.scss */
+.dropup .btn-light-grey .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 605, ../sass/partials/_buttons.scss */
+.btn-dark-grey {
+    background-color: #707788;
+    border-color: #646b7a;
+    color: #ffffff;
+}
+/* line 609, ../sass/partials/_buttons.scss */
+.btn-dark-grey:hover, .btn-dark-grey:focus, .btn-dark-grey:active, .btn-dark-grey.active {
+    background-color: #646b7a;
+    border-color: #595e6c;
+    color: #ffffff;
+}
+/* line 614, ../sass/partials/_buttons.scss */
+.btn-dark-grey.disabled:hover, .btn-dark-grey.disabled:focus, .btn-dark-grey.disabled:active, .btn-dark-grey.disabled.active, .btn-dark-grey[disabled]:hover, .btn-dark-grey[disabled]:focus, .btn-dark-grey[disabled]:active, .btn-dark-grey[disabled].active, fieldset[disabled] .btn-dark-grey:hover, fieldset[disabled] .btn-dark-grey:focus, fieldset[disabled] .btn-dark-grey:active, fieldset[disabled] .btn-dark-grey.active {
+    background-color: white;
+    border-color: #fbfbfc;
+    color: #ffffff;
+}
+/* line 619, ../sass/partials/_buttons.scss */
+.btn-dark-grey .caret {
+    border-top-color: #ffffff;
+}
+/* line 623, ../sass/partials/_buttons.scss */
+.dropup .btn-dark-grey .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 628, ../sass/partials/_buttons.scss */
+.btn-transparent-white {
+    background: none;
+    border-color: rgba(255, 255, 255, 0.6);
+    border-width: 1px;
+    color: #ffffff !important;
+}
+/* line 633, ../sass/partials/_buttons.scss */
+.btn-transparent-white:hover, .btn-transparent-white:focus, .btn-transparent-white:active, .btn-transparent-white.active {
+    background-color: rgba(44, 47, 59, 0.1);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+/* line 637, ../sass/partials/_buttons.scss */
+.btn-transparent-white.disabled:hover, .btn-transparent-white.disabled:focus, .btn-transparent-white.disabled:active, .btn-transparent-white.disabled.active, .btn-transparent-white[disabled]:hover, .btn-transparent-white[disabled]:focus, .btn-transparent-white[disabled]:active, .btn-transparent-white[disabled].active, fieldset[disabled] .btn-transparent-white:hover, fieldset[disabled] .btn-transparent-white:focus, fieldset[disabled] .btn-transparent-white:active, fieldset[disabled] .btn-transparent-white.active {
+    background: none;
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+/* line 642, ../sass/partials/_buttons.scss */
+.btn-transparent-white .caret {
+    border-top-color: rgba(44, 47, 59, 0.1);
+}
+/* line 646, ../sass/partials/_buttons.scss */
+.dropup .btn-transparent-white .caret {
+    border-bottom: 4px solid rgba(44, 47, 59, 0.1);
+}
+
+/* line 651, ../sass/partials/_buttons.scss */
+.btn-transparent-grey {
+    background: none;
+    border-color: rgba(139, 145, 160, 0.3);
+    border-width: 1px;
+    color: #8B91A0 !important;
+}
+/* line 656, ../sass/partials/_buttons.scss */
+.btn-transparent-grey:hover, .btn-transparent-grey:focus, .btn-transparent-grey:active, .btn-transparent-grey.active {
+    background-color: rgba(139, 145, 160, 0.1);
+    border-color: rgba(139, 145, 160, 0.6);
+    box-shadow: none !important;
+}
+/* line 661, ../sass/partials/_buttons.scss */
+.btn-transparent-grey.disabled:hover, .btn-transparent-grey.disabled:focus, .btn-transparent-grey.disabled:active, .btn-transparent-grey.disabled.active, .btn-transparent-grey[disabled]:hover, .btn-transparent-grey[disabled]:focus, .btn-transparent-grey[disabled]:active, .btn-transparent-grey[disabled].active, fieldset[disabled] .btn-transparent-grey:hover, fieldset[disabled] .btn-transparent-grey:focus, fieldset[disabled] .btn-transparent-grey:active, fieldset[disabled] .btn-transparent-grey.active {
+    background: none;
+    border-color: rgba(139, 145, 160, 0.3);
+    color: #8B91A0;
+}
+/* line 666, ../sass/partials/_buttons.scss */
+.btn-transparent-grey .caret {
+    border-top-color: #8B91A0;
+}
+/* line 670, ../sass/partials/_buttons.scss */
+.dropup .btn-transparent-grey .caret {
+    border-bottom: 4px solid #8B91A0;
+}
+
+/* line 675, ../sass/partials/_buttons.scss */
+.btn-transparent-red {
+    background: none;
+    border-color: rgba(230, 107, 107, 0.6);
+    border-width: 2px;
+    color: #e66b6b !important;
+}
+/* line 680, ../sass/partials/_buttons.scss */
+.btn-transparent-red:hover, .btn-transparent-red:focus, .btn-transparent-red:active, .btn-transparent-red.active {
+    background-color: rgba(230, 107, 107, 0.1);
+    border-color: rgba(230, 107, 107, 0.8);
+}
+/* line 684, ../sass/partials/_buttons.scss */
+.btn-transparent-red.disabled:hover, .btn-transparent-red.disabled:focus, .btn-transparent-red.disabled:active, .btn-transparent-red.disabled.active, .btn-transparent-red[disabled]:hover, .btn-transparent-red[disabled]:focus, .btn-transparent-red[disabled]:active, .btn-transparent-red[disabled].active, fieldset[disabled] .btn-transparent-red:hover, fieldset[disabled] .btn-transparent-red:focus, fieldset[disabled] .btn-transparent-red:active, fieldset[disabled] .btn-transparent-red.active {
+    background: none;
+    border-color: rgba(230, 107, 107, 0.3);
+    color: #e66b6b;
+}
+/* line 689, ../sass/partials/_buttons.scss */
+.btn-transparent-red .caret {
+    border-top-color: #ffffff;
+}
+/* line 693, ../sass/partials/_buttons.scss */
+.dropup .btn-transparent-red .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 699, ../sass/partials/_buttons.scss */
+.btn-squared {
+    border-radius: 0 !important;
+}
+
+/* line 703, ../sass/partials/_buttons.scss */
+.btn-icon {
+    background-color: #EFEFEF;
+    background-image: -moz-linear-gradient(center top, #FAFAFA, #EFEFEF);
+    border: 1px solid #DDDDDD;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    height: 80px;
+    display: block;
+    font-size: 14px;
+    padding: 5px 0 0;
+    position: relative;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    color: #333333;
+}
+
+/* line 719, ../sass/partials/_buttons.scss */
+.btn-icon:hover {
+    border-color: #A5A5A5;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+    color: #444444;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+
+/* line 726, ../sass/partials/_buttons.scss */
+.btn-icon .badge {
+    border-radius: 12px 12px 12px 12px !important;
+    border-style: solid;
+    border-width: 0;
+    box-shadow: none;
+    color: #FFFFFF !important;
+    font-size: 11px !important;
+    font-weight: 300;
+    padding: 3px 7px;
+    position: absolute;
+    right: -5px;
+    text-shadow: none;
+    top: -5px;
+}
+
+/* line 740, ../sass/partials/_buttons.scss */
+.btn-icon [class^="fa-"], .btn-icon [class*=" fa-"] {
+    clear: both;
+    display: block;
+}
+
+/* line 744, ../sass/partials/_buttons.scss */
+.buttons-widget .btn, .buttons-widget .bootstrap-switch, .buttons-widget button {
+    margin-bottom: 5px;
+}
+
+/* line 747, ../sass/partials/_buttons.scss */
+.buttons-widget .btn-group button, .buttons-widget .btn-group-vertical button, .buttons-widget .btn-group .btn, .buttons-widget .btn-group-vertical .btn {
+    margin-bottom: 0;
+}
+.btn {
+    transition: all 0.3s ease 0s !important;
+}
+
+/* line 7, ../sass/partials/_buttons.scss */
+.btn-azure {
+    background-color: #00BDCC;
+    border-color: #00a5b3;
+    color: #ffffff;
+}
+/* line 11, ../sass/partials/_buttons.scss */
+.btn-azure:hover, .btn-azure:focus, .btn-azure:active, .btn-azure.active {
+    background-color: #00a5b3;
+    border-color: #008e99;
+    color: #ffffff;
+}
+/* line 16, ../sass/partials/_buttons.scss */
+.btn-azure.disabled:hover, .btn-azure.disabled:focus, .btn-azure.disabled:active, .btn-azure.disabled.active, .btn-azure[disabled]:hover, .btn-azure[disabled]:focus, .btn-azure[disabled]:active, .btn-azure[disabled].active, fieldset[disabled] .btn-azure:hover, fieldset[disabled] .btn-azure:focus, fieldset[disabled] .btn-azure:active, fieldset[disabled] .btn-azure.active {
+    background-color: #e5fdff;
+    border-color: #ccfbff;
+    color: #ffffff;
+}
+/* line 21, ../sass/partials/_buttons.scss */
+.btn-azure .caret {
+    border-top-color: #ffffff;
+}
+/* line 25, ../sass/partials/_buttons.scss */
+.dropup .btn-azure .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 30, ../sass/partials/_buttons.scss */
+.btn-light-azure {
+    background-color: #00d5e6;
+    border-color: #00bdcc;
+    color: #ffffff;
+}
+/* line 34, ../sass/partials/_buttons.scss */
+.btn-light-azure:hover, .btn-light-azure:focus, .btn-light-azure:active, .btn-light-azure.active {
+    background-color: #00bdcc;
+    border-color: #00a5b3;
+    color: #ffffff;
+}
+/* line 39, ../sass/partials/_buttons.scss */
+.btn-light-azure.disabled:hover, .btn-light-azure.disabled:focus, .btn-light-azure.disabled:active, .btn-light-azure.disabled.active, .btn-light-azure[disabled]:hover, .btn-light-azure[disabled]:focus, .btn-light-azure[disabled]:active, .btn-light-azure[disabled].active, fieldset[disabled] .btn-light-azure:hover, fieldset[disabled] .btn-light-azure:focus, fieldset[disabled] .btn-light-azure:active, fieldset[disabled] .btn-light-azure.active {
+    background-color: white;
+    border-color: #e5fdff;
+    color: #ffffff;
+}
+/* line 44, ../sass/partials/_buttons.scss */
+.btn-light-azure .caret {
+    border-top-color: #ffffff;
+}
+/* line 48, ../sass/partials/_buttons.scss */
+.dropup .btn-light-azure .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 53, ../sass/partials/_buttons.scss */
+.btn-dark-azure {
+    background-color: #008e99;
+    border-color: #007680;
+    color: #ffffff;
+}
+/* line 57, ../sass/partials/_buttons.scss */
+.btn-dark-azure:hover, .btn-dark-azure:focus, .btn-dark-azure:active, .btn-dark-azure.active {
+    background-color: #007680;
+    border-color: #005f66;
+    color: #ffffff;
+}
+/* line 62, ../sass/partials/_buttons.scss */
+.btn-dark-azure.disabled:hover, .btn-dark-azure.disabled:focus, .btn-dark-azure.disabled:active, .btn-dark-azure.disabled.active, .btn-dark-azure[disabled]:hover, .btn-dark-azure[disabled]:focus, .btn-dark-azure[disabled]:active, .btn-dark-azure[disabled].active, fieldset[disabled] .btn-dark-azure:hover, fieldset[disabled] .btn-dark-azure:focus, fieldset[disabled] .btn-dark-azure:active, fieldset[disabled] .btn-dark-azure.active {
+    background-color: #b3f9ff;
+    border-color: #99f8ff;
+    color: #ffffff;
+}
+/* line 67, ../sass/partials/_buttons.scss */
+.btn-dark-azure .caret {
+    border-top-color: #ffffff;
+}
+/* line 71, ../sass/partials/_buttons.scss */
+.dropup .btn-dark-azure .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 76, ../sass/partials/_buttons.scss */
+.btn-blue {
+    background-color: #5F8295;
+    border-color: #557485;
+    color: #ffffff;
+}
+/* line 80, ../sass/partials/_buttons.scss */
+.btn-blue:hover, .btn-blue:focus, .btn-blue:active, .btn-blue.active {
+    background-color: #557485;
+    border-color: #4b6776;
+    color: #ffffff;
+}
+/* line 85, ../sass/partials/_buttons.scss */
+.btn-blue.disabled:hover, .btn-blue.disabled:focus, .btn-blue.disabled:active, .btn-blue.disabled.active, .btn-blue[disabled]:hover, .btn-blue[disabled]:focus, .btn-blue[disabled]:active, .btn-blue[disabled].active, fieldset[disabled] .btn-blue:hover, fieldset[disabled] .btn-blue:focus, fieldset[disabled] .btn-blue:active, fieldset[disabled] .btn-blue.active {
+    background-color: white;
+    border-color: #f8fafb;
+    color: #ffffff;
+}
+/* line 90, ../sass/partials/_buttons.scss */
+.btn-blue .caret {
+    border-top-color: #ffffff;
+}
+/* line 94, ../sass/partials/_buttons.scss */
+.dropup .btn-blue .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 99, ../sass/partials/_buttons.scss */
+.btn-light-blue {
+    background-color: #7c9bab;
+    border-color: #6c8fa1;
+    color: #ffffff;
+}
+/* line 103, ../sass/partials/_buttons.scss */
+.btn-light-blue:hover, .btn-light-blue:focus, .btn-light-blue:active, .btn-light-blue.active {
+    background-color: #6c8fa1;
+    border-color: #5f8295;
+    color: #ffffff;
+}
+/* line 108, ../sass/partials/_buttons.scss */
+.btn-light-blue.disabled:hover, .btn-light-blue.disabled:focus, .btn-light-blue.disabled:active, .btn-light-blue.disabled.active, .btn-light-blue[disabled]:hover, .btn-light-blue[disabled]:focus, .btn-light-blue[disabled]:active, .btn-light-blue[disabled].active, fieldset[disabled] .btn-light-blue:hover, fieldset[disabled] .btn-light-blue:focus, fieldset[disabled] .btn-light-blue:active, fieldset[disabled] .btn-light-blue.active {
+    background-color: white;
+    border-color: white;
+    color: #ffffff;
+}
+/* line 113, ../sass/partials/_buttons.scss */
+.btn-light-blue .caret {
+    border-top-color: #ffffff;
+}
+/* line 117, ../sass/partials/_buttons.scss */
+.dropup .btn-light-blue .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 122, ../sass/partials/_buttons.scss */
+.btn-dark-blue {
+    background-color: #4b6776;
+    border-color: #415966;
+    color: #ffffff;
+}
+/* line 126, ../sass/partials/_buttons.scss */
+.btn-dark-blue:hover, .btn-dark-blue:focus, .btn-dark-blue:active, .btn-dark-blue.active {
+    background-color: #415966;
+    border-color: #374c57;
+    color: #ffffff;
+}
+/* line 131, ../sass/partials/_buttons.scss */
+.btn-dark-blue.disabled:hover, .btn-dark-blue.disabled:focus, .btn-dark-blue.disabled:active, .btn-dark-blue.disabled.active, .btn-dark-blue[disabled]:hover, .btn-dark-blue[disabled]:focus, .btn-dark-blue[disabled]:active, .btn-dark-blue[disabled].active, fieldset[disabled] .btn-dark-blue:hover, fieldset[disabled] .btn-dark-blue:focus, fieldset[disabled] .btn-dark-blue:active, fieldset[disabled] .btn-dark-blue.active {
+    background-color: #e9eef1;
+    border-color: #d9e2e7;
+    color: #ffffff;
+}
+/* line 136, ../sass/partials/_buttons.scss */
+.btn-dark-blue .caret {
+    border-top-color: #ffffff;
+}
+/* line 140, ../sass/partials/_buttons.scss */
+.dropup .btn-dark-blue .caret {
+    border-bottom: 4px solid #ffffff;
+}
+
+/* line 145, ../sass/partials/_buttons.scss */
+.btn-green {
+    background-color: #1FBBA6;
+    border-color: #1ba593;
+    color: #ffffff;
+}
+:not(.active .in) {
+    visibility: hidden;
 }

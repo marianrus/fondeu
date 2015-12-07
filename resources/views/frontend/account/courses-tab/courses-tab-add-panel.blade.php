@@ -7,15 +7,26 @@
             <div class="panel-body">
                 <div class="row">
                     <div class="col-lg-12">
-                        <form  action="/courses-admin-form" method="post">
+                        <form  action="/courses-admin-form" method="post" id="new-course-add">
                             {!! csrf_field() !!}
+                            <div class="col-md-12">
+                                <div class="errorHandler alert alert-danger no-display">
+                                    <i class="fa fa-times-sign"></i>Corectati erorile
+                                </div>
+                                <div class="successHandler alert alert-success no-display">
+                                    <i class="fa fa-ok"></i> Validarea a fost facuta cu success!
+                                </div>
+                            </div>
                             <div class="col-md-12">
                                 <h3>Informatii Curs</h3>
                                 <hr>
                             </div>
+
                             <div class="form-group col-lg-6">
-                                <label>Numele cursului</label>
-                                <input class="form-control" name="course_name" placeholder="Numele cursului">
+                                <label class="control-label">
+                                    Numele cursului <span class="symbol required"></span>
+                                </label>
+                                <input class="form-control" name="course_name" id="course_name" placeholder="Numele cursului">
                             </div>
 
                             <div class="form-group col-lg-6">
@@ -54,7 +65,7 @@
                             </div>
                             <div class="form-group col-lg-6">
                                 <label>Judet</label>
-                                <input class="form-control county select-container" name="county_id">
+                                <input class="form-control county select-container" name="count_id">
                             </div>
 
                             <div class="form-group col-lg-6">
@@ -66,7 +77,7 @@
 
                             <div class="form-group">
                                 <label for="course_description-add-panel">Descriere</label>
-                                <textarea class="form-control tiny-mce" name="course_description"  rows="20"></textarea>
+                                <textarea class="form-control tiny-mce" name="course_description"  rows="50"></textarea>
                             </div>
                     </div>
                     <div class="col-lg-3">
@@ -89,7 +100,7 @@
 <!--          -->
 <!--        </div>-->
         <div class="col-md-4 pull-right">
-            <button class="btn btn-green btn-block" type="submit">
+            <button class="btn btn-green btn-block" id="successSweetAlert" type="submit">
                 Salvati <i class="fa fa-arrow-circle-right"></i>
             </button>
         </div>

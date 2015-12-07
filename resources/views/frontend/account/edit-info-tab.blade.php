@@ -34,48 +34,53 @@
                     <label class="control-label">
                         Twitter
                     </label>
-            <span class="input-icon">
-                <input class="form-control" type="text"
-                       placeholder="Text Field">
-                <i class="fa fa-twitter"></i> </span>
+                    <span class="input-icon">
+                        <input class="form-control" type="text"
+                               placeholder="Twitter">
+                        <i class="fa fa-twitter"></i>
+                    </span>
                 </div>
                 <div class="form-group">
                     <label class="control-label">
                         Facebook
                     </label>
-            <span class="input-icon">
-                <input class="form-control" type="text"
-                       placeholder="Text Field">
-                <i class="fa fa-facebook"></i> </span>
+                    <span class="input-icon">
+                        <input class="form-control" type="text"
+                               placeholder="Facebook">
+                        <i class="fa fa-facebook"></i>
+                    </span>
                 </div>
                 <div class="form-group">
                     <label class="control-label">
                         Google Plus
                     </label>
-            <span class="input-icon">
-                <input class="form-control" type="text"
-                       placeholder="Text Field">
-                <i class="fa fa-google-plus"></i> </span>
+                    <span class="input-icon">
+                        <input class="form-control" type="text"
+                               placeholder="Google Plus">
+                        <i class="fa fa-google-plus"></i>
+                    </span>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="form-group">
-                    <label class="control-label">
-                        Github
-                    </label>
-            <span class="input-icon">
-                <input class="form-control" type="text"
-                       placeholder="Text Field">
-                <i class="fa fa-github"></i> </span>
-                </div>
+<!--                <div class="form-group">-->
+<!--                    <label class="control-label">-->
+<!--                        Github-->
+<!--                    </label>-->
+<!--                    <span class="input-icon">-->
+<!--                        <input class="form-control" type="text"-->
+<!--                               placeholder="Github">-->
+<!--                        <i class="fa fa-github"></i> -->
+<!--                    </span>-->
+<!--                </div>-->
                 <div class="form-group">
                     <label class="control-label">
                         Linkedin
                     </label>
-            <span class="input-icon">
-                <input class="form-control" type="text"
-                       placeholder="Text Field">
-                <i class="fa fa-linkedin"></i> </span>
+                    <span class="input-icon">
+                        <input class="form-control" type="text"
+                               placeholder="Linkedin">
+                        <i class="fa fa-linkedin"></i>
+                    </span>
                 </div>
                 <div class="form-group">
                     <label class="control-label">
@@ -83,7 +88,7 @@
                     </label>
                 <span class="input-icon">
                     <input class="form-control" type="text"
-                           placeholder="Text Field">
+                           placeholder="Skype">
                     <i class="fa fa-skype"></i>
                 </span>
                 </div>
@@ -209,7 +214,7 @@
                     <label class="control-label">
                         Judet
                     </label>
-                    <input class="form-control county select-container" placeholder="Judet" type="text" name="county_id"" id="county">
+                    <input class="form-control county select-container" placeholder="Judet" type="text" name="count_id2">
                 </div>
             </div>
             <div class="col-md-8">
@@ -235,25 +240,25 @@
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="col-md-12">
-        <h3>Additional Info</h3>
-        <hr>
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-12">
-        <div>
-            Required Fields
-            <hr>
-        </div>
-    </div>
-</div>
+<!--<div class="row">-->
+<!--    <div class="col-md-12">-->
+<!--        <h3>Additional Info</h3>-->
+<!--        <hr>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<div class="row">-->
+<!--    <div class="col-md-12">-->
+<!--        <div>-->
+<!--            Required Fields-->
+<!--            <hr>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 <div class="row">
     <div class="col-md-8">
-        <p>
-            By clicking UPDATE, you are agreeing to the Policy and Terms &amp; Conditions.
-        </p>
+<!--        <p>-->
+<!--            By clicking UPDATE, you are agreeing to the Policy and Terms &amp; Conditions.-->
+<!--        </p>-->
     </div>
     <div class="col-md-4">
         <button class="btn btn-green btn-block" type="submit">

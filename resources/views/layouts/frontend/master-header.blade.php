@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="{{ URL::asset('plugins/datepicker/css/datepicker.css')}}" />
     <link rel="stylesheet" href="{{ URL::asset('plugins/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css')}}" />
     <link rel="stylesheet" href="{{ URL::asset('plugins/bootstrap-social-buttons/bootstrap-social.css')}}" />
+    <link rel="stylesheet" href="{{ URL::asset('plugins/sweetalert/lib/sweet-alert.css')}}" />
     <link rel="shortcut icon" href="images/favicon.ico">
 <!--    <link media="all" type="text/css" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">-->
     <link media="all" type="text/css" rel="stylesheet" href="http://brick.a.ssl.fastly.net/Source+Sans+Pro:300,400,400i,600/Open+Sans:300,400,600,700">
