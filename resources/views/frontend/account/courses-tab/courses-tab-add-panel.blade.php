@@ -31,7 +31,7 @@
 
                             <div class="form-group col-lg-6">
                                     <label>Categoria </label>
-                                    <select name="category_id" data-placeholder="Categoria"  class="form-control select2-select select-container">
+                                    <select name="category_course_id" data-placeholder="Categoria"  class="form-control select2-select select-container">
                                         <option></option>
                                         @foreach($categories as $cat)
                                              <option  value="{{$cat->category_course_id}}">{{$cat->category_course_name}}</option>
@@ -65,12 +65,12 @@
                             </div>
                             <div class="form-group col-lg-6">
                                 <label>Judet</label>
-                                <input class="form-control county select-container" name="count_id">
+                                <input class="form-control county select-container" name="county_name">
                             </div>
 
                             <div class="form-group col-lg-6">
                                 <label>Localitate</label>
-                                <input class="form-control city select-container" name="city_id" placeholder="Oras">
+                                <input class="form-control city select-container" name="city_name" placeholder="Oras">
                             </div>
 
                             <div class="divider_block">&nbsp;</div>

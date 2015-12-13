@@ -1,4 +1,4 @@
-@extends('layouts.frontend.master')
+@include('layouts.frontend.master-header')
 
 @section('content')
     <div class="row">
@@ -21,3 +21,7 @@
         </div>
     </div>
 @stop
+
+@include('layouts.frontend.master-content')
+
+@include('layouts.frontend.master-footer')

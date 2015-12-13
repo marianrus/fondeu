@@ -20,7 +20,7 @@
             </thead>
             <tbody>
             @foreach($courses as $course)
-            <tr>
+            <tr data-course-id="{{$course->course_id}}">
                 <td class="center">
                     <div class="checkbox-table">
                         <label>
@@ -48,7 +48,7 @@
                 </td>
                 <td class="center">
                     <div class="visible-md visible-lg hidden-sm hidden-xs">
-                        <a href="#" class="btn btn-light-blue tooltips" data-placement="top" data-original-title="Edit"><i
+                        <a href="#" class="btn btn-light-blue tooltips edit-course" data-placement="top" data-original-title="Edit"><i
                                 class="fa fa-edit"></i></a>
                         <a href="#" class="btn btn-green tooltips" data-placement="top" data-original-title="Share"><i
                                 class="fa fa-share"></i></a>

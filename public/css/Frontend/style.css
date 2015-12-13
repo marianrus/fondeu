@@ -4651,8 +4651,12 @@ body.lock-position
     padding: 15px;
 }
 .tab-content>.tab-pane {
-    /*display: none;*/
-    /*visibility: hidden;*/
+    display: none;
+    visibility: hidden;
+}
+.tab-content>.active {
+    display: block;
+    visibility:visible;
 }
 .fade {
     opacity: 0;
@@ -6331,7 +6335,4 @@ span.input-help > input {
     background-color: #1FBBA6;
     border-color: #1ba593;
     color: #ffffff;
-}
-:not(.active .in) {
-    visibility: hidden;
 }

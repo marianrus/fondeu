@@ -21,14 +21,13 @@
                 : string;
         },
 
-
         FrontendHelper : {
 
             fillPostBox : function(r){
                 var  liPost          =  $('<li>').attr('class', 'post');
                 var  divPostContent  =  $('<div>').attr('class','post_content');
-                var  h2WithNumber =  $('<h2>').attr('class','with_number');
-                var  aName        =  $('<a>',{
+                var  h2WithNumber    =  $('<h2>').attr('class','with_number');
+                var  aName           =  $('<a>',{
                     href : 'curs/' + r.course_id,
                     title: r.course_name,
                     text : r.course_name
@@ -92,8 +91,37 @@
                         .append(courseDescription)
                         .append(CourseLocation)
                         .append(readMore));
+            },
+            /**
+             *
+             */
+            fillForm : function(element, data){
+              $(element +' *').filter(':input, select textarea').each(function(k,e){
+                  var el = $(e);
+                  if(el.attr('name')=='course_description'){
+                      debugger;
+                  }
+                   if($.inArray(data[0] , el.attr('name'))){
+                       el.val(data[0][el.attr('name')]);
+                   }
+                  debugger;
+                  if(el.has('tiny-mce')){
+////                      tinymce.get('tiny-mce').focus();
+//                      tinymce.get('.tiny-mce').setContent(data[0][$(e).attr('name')]);
+//                      tinymce.activeEditor.setContent(data[0][$(e).attr('name')]);
+
+//                      $(e).val('<p>'+data[0][$(e).attr('name')]+'</p>');
+                      $(tinymce.get('tiny-mce')).html('<p>This is my new content!</p>');
+                  }
+                  if(el.has('select-container')){
+
+                  }
+
+              });
+
             }
         },
+
         /**
          *
          * @param url
