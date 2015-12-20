@@ -98,9 +98,6 @@
             fillForm : function(element, data){
               $(element +' *').filter(':input, select textarea').each(function(k,e){
                   var el = $(e);
-                  if(el.attr('name')=='course_description'){
-                      debugger;
-                  }
                    if($.inArray(data[0] , el.attr('name'))){
                        el.val(data[0][el.attr('name')]);
                    }
@@ -108,16 +105,27 @@
                   if(el.hasClass('select-container')){
                       if(el.attr('id')){
                           var elementId = el.attr('id');
-//                          $('#'+elementId).select2('val',data[0][el.attr('name')]);
-//                          $('#'+elementId).val(data[0][el.attr('name')]);
                           $('#'+elementId).select2('data',{
-                              id : 12,
-                              text : 'Capalnia'
+                              text : data[0][el.attr('name')]
                           });
                       }
                   }
               });
+            },
 
+            refreshForm : function(element){
+                $(element +' *').filter(':input, select textarea').each(function(k,e){
+                    var el = $(e);
+                    el.val('');
+                    if(el.hasClass('select-container')){
+                        if(el.attr('id')){
+                            var elementId = el.attr('id');
+                            $('#'+elementId).select2('data',{
+                                text :''
+                            });
+                        }
+                    }
+                });
             }
         },
 

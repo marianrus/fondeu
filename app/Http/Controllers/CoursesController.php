@@ -101,7 +101,8 @@ class CoursesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Course::destroy($id);
+        return json_encode('success');
     }
     public function filterCourses(Request $request)
     {

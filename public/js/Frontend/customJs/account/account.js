@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-
+    resetPanelStates();
     initTooltips();
 //    initTinyMce();
     initDatePicker();
@@ -11,6 +11,8 @@ $(document).ready(function(){
     addTabCountyAndCity();
     handleEditCourse();
     dateRangePicker();
+    initCitySelect2();
+    handleDeleteCourse();
 });
 
 
@@ -19,11 +21,11 @@ function initTooltips(){
     if ($(".tooltips").length) {
         $('.tooltips').tooltip();
     }
-//    $('.popovers').popover();
 }
 function handleButtonCourse(){
     $('#btn-add-course').click(function () {
         toggleCoursePanel();
+        App.Helper.FrontendHelper.refreshForm('#new-course-add');
     });
 }
 
@@ -85,21 +87,24 @@ function addTabCountyAndCity(){
     );
 
     $('#add-county-id').on('change',function(){
-        var countyId = $('#add-county-id').val();
-        App.Plugins.select2Handler(
-            '#add-city-id',
-            '',
-            '/helper/cities',
-            'city_name',
-            {
-                county_id : countyId
-            },
-            {
-                text : 'city_name',
-                id   : 'city_id'
-            }
-        );
+        initCitySelect2();
     });
+}
+
+function initCitySelect2(){
+    App.Plugins.select2Handler(
+        '#add-city-id',
+        '',
+        '/helper/cities',
+        'city_name',
+        {
+            county_id : $('#add-county-id').val()
+        },
+        {
+            text : 'city_name',
+            id   : 'city_id'
+        }
+    );
 }
 
 function dateRangePicker()
@@ -140,24 +145,11 @@ function initBootstrapSwitch(){
 function initSweetAlert(){
     $("#successSweetAlert").on("click", function (e) {
         swal("Cursul a fost salvat", "", "success")
-
         e.preventDefault();
     });
 
 
 }
-
-/**
- * Validation of new course add
- */
-//$.validate();
-//jQuery('#new-course-add').validate({
-//    errorElement    : 'span',
-//    errorClass      : 'help-block',
-//    errorPlacement  : function(error, element){
-//        error.insertAfter(element);
-//    }
-//});
 
 function handleEditCourse(){
 
@@ -169,8 +161,6 @@ function handleEditCourse(){
             '/curs/' + courseId +'?format=json',
             'GET',
             function (r) {
-//                displayEditForm(r);
-//                App.Helper.FrontendHelper.fillForm('#new-course-add' ,JSON.stringify(r));
                 App.Helper.FrontendHelper.fillForm('#new-course-add' , r);
                 toggleCoursePanel();
             },
@@ -180,11 +170,55 @@ function handleEditCourse(){
         );
     });
 }
+function handleDeleteCourse(){
+
+    var element  = '.delete-course';
+
+    $(element).click(function(e){
+      var parentElement = $(e.currentTarget).closest('tr');
+      var  courseId = parentElement.data('course-id');
+
+        swal({ title: "Sunteti siguri ca vreti sa stergeti cursul?",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Sterge",
+            closeOnConfirm: true,
+            cancelButtonText : 'Anuleaza'
+        }, function(){
+            App.Helper.ajaxCall(
+                '/curs/' + courseId +'?format=json',
+                'Delete',
+                function (r) {
+                    if(r == 'success'){
+                        parentElement.fadeOut("slow");
+                        parentElement.remove();
+                    }
+                },
+                function (e) {
+                    alert('error');
+                }
+            );
+        });
+    });
+}
 
 function displayEditForm(data){
     data = JSON.stringify(data);
     var form = $('#new-course-add');
-
-
 }
 
+function resetPanelStates()
+{
+    $('.nav-tabs li').click(function(e){
+       var panel =  $(e.currentTarget).children().attr('href');
+
+        switch (panel){
+
+            case '#panel_courses':
+                $('#courses-table').show();
+                $('#courses-add-panel').hide();
+            default : break;
+        }
+    });
+}

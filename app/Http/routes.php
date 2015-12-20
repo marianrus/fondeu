@@ -22,6 +22,7 @@ Route::get('/','HomeController@index');
  */
 Route::get('/cursuri','CoursesController@index');
 Route::get('/curs/{id}','CoursesController@show');
+Route::delete('/curs/{id}','CoursesController@destroy');
 Route::post('/filter','CoursesController@filterCourses');
 
 /**
