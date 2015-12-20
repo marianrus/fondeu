@@ -104,19 +104,18 @@
                    if($.inArray(data[0] , el.attr('name'))){
                        el.val(data[0][el.attr('name')]);
                    }
-                  debugger;
-                  if(el.has('tiny-mce')){
-////                      tinymce.get('tiny-mce').focus();
-//                      tinymce.get('.tiny-mce').setContent(data[0][$(e).attr('name')]);
-//                      tinymce.activeEditor.setContent(data[0][$(e).attr('name')]);
 
-//                      $(e).val('<p>'+data[0][$(e).attr('name')]+'</p>');
-                      $(tinymce.get('tiny-mce')).html('<p>This is my new content!</p>');
+                  if(el.hasClass('select-container')){
+                      if(el.attr('id')){
+                          var elementId = el.attr('id');
+//                          $('#'+elementId).select2('val',data[0][el.attr('name')]);
+//                          $('#'+elementId).val(data[0][el.attr('name')]);
+                          $('#'+elementId).select2('data',{
+                              id : 12,
+                              text : 'Capalnia'
+                          });
+                      }
                   }
-                  if(el.has('select-container')){
-
-                  }
-
               });
 
             }
@@ -172,6 +171,67 @@
                 callback : function(value){
                     if(value){
                         callbackFunction();
+                    }
+                }
+            });
+        }
+    },
+
+
+    App.Plugins = {
+
+        /**
+         * Example1: App.Plugins.select2Handler(
+                     '#edit-county-id',
+                     '',
+                     '/helper/counties',
+                     'county',
+                     null,
+                     {
+                         text : 'county_name',
+                         id   :  'county_id'
+                     }
+                     );
+         *
+         *
+         *
+         * @param identifier
+         * @param placeholder
+         * @param ajaxUrl
+         * @param termKey
+         * @param extraTerm
+         * @param resultsMap
+         * @param stringToShortMsg
+         */
+        select2Handler : function(identifier, placeholder, ajaxUrl, termKey, extraTerm, resultsMap, stringToShortMsg){
+
+            extraTerm = extraTerm instanceof Object ? extraTerm : {};
+            $(identifier).select2({
+                allowClear : true,
+                placeholder         : placeholder,
+                formatInputTooShort : function(){
+                        return stringToShortMsg || "Introduceti cel putin un caracter"
+                },
+                minimumInputLength: 1,
+                ajax : {
+                    url         : ajaxUrl,
+                    dataType    : 'json',
+                    delay       : 250,
+                    quietMillis : 50,
+                    data        : function(term){
+                         extraTerm[termKey] = term;
+                        return extraTerm;
+
+                    },
+                    results     : function(data){
+                        return {
+                            results: $.map(data, function (item) {
+                                return {
+                                    text:item[resultsMap.text],
+                                    id:  item[resultsMap.id]
+                                }
+                            })
+                        }
                     }
                 }
             });

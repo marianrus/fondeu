@@ -1,15 +1,16 @@
 
 $(document).ready(function(){
+
     initTooltips();
-    initTinyMce();
+//    initTinyMce();
     initDatePicker();
     initBootstrapSwitch();
     initSweetAlert();
     handleButtonCourse();
-    selectCounty();
-    selectCity1();
-    selectCity2();
+    editTabCountyAndCity();
+    addTabCountyAndCity();
     handleEditCourse();
+    dateRangePicker();
 });
 
 
@@ -18,6 +19,7 @@ function initTooltips(){
     if ($(".tooltips").length) {
         $('.tooltips').tooltip();
     }
+//    $('.popovers').popover();
 }
 function handleButtonCourse(){
     $('#btn-add-course').click(function () {
@@ -30,105 +32,83 @@ function toggleCoursePanel(){
     $('#courses-add-panel').fadeToggle("slow", "linear");
 }
 
-function selectCounty(){
-    $('.county').select2({
-        placeholder: "Judet",
-        formatInputTooShort: function () {
-            return "Introduceti cel putin un caracter";
-        },
+function editTabCountyAndCity(){
+    /**
+     * edit info tab
+     */
+    App.Plugins.select2Handler(
+        '#edit-county-id',
+        '',
+        '/helper/counties',
+        'county',
+        null,
+        {
+            text : 'county_name',
+            id   :  'county_id'
+        }
+    );
 
-        ajax: {
-            url: '/helper/counties',
-            dataType: 'json',
-            delay: 250,
-            quietMillis: 50,
-            data: function (term) {
-                return {
-                    county: term
-                };
+
+    $('#edit-county-id').on('change', function(){
+        var countyId = $('#edit-county-id').val();
+        App.Plugins.select2Handler(
+            '#edit-city-id',
+            '',
+            '/helper/cities',
+            'city_name',
+            {
+                county_id : countyId
             },
-            results: function (data) {
-                return {
-                    results: $.map(data, function (item) {
-                        return {
-                            text: item.county_name,
-                            id: item.county_id
-                        }
-                    })
-                };
-            },
-            cache :true
-        },
-        minimumInputLength: 1
-    });
-}
-function selectCity1(){
-    $('.city').select2({
-        placeholder: "Judet",
-        formatInputTooShort: function () {
-            return "Introduceti cel putin un caracter";
-        },
-        ajax: {
-            url: '/helper/cities',
-            dataType: 'json',
-            delay: 250,
-            quietMillis: 50,
-            data: function (term) {
-                return {
-//                    county_id : $('.county').select2('data').id,
-                    county_id : $('[name=count_id2]').val(),
-                    city_name : term
-                };
-            },
-            results: function (data) {
-                return {
-                    results: $.map(data, function (item) {
-                        return {
-                            text: item.city_name,
-                            id: item.city_id
-                        }
-                    })
-                };
-            },
-            cache :true
-        },
-        minimumInputLength: 1
+            {
+                text : 'city_name',
+                id   : 'city_id'
+            }
+        );
     });
 
 }
-function selectCity2(){
-    $('.city').select2({
-        placeholder: "Judet",
-        formatInputTooShort: function () {
-            return "Introduceti cel putin un caracter";
-        },
-        ajax: {
-            url: '/helper/cities',
-            dataType: 'json',
-            delay: 250,
-            quietMillis: 50,
-            data: function (term) {
-                return {
-                    county_id : $('[name=count_id]').val(),
-                    city_name : term
-                };
-            },
-            results: function (data) {
-                return {
-                    results: $.map(data, function (item) {
-                        return {
-                            text: item.city_name,
-                            id: item.city_id
-                        }
-                    })
-                };
-            },
-            cache :true
-        },
-        minimumInputLength: 1
-    });
 
+function addTabCountyAndCity(){
+    /**
+     * course add tab
+     */
+    App.Plugins.select2Handler(
+        '#add-county-id',
+        '',
+        '/helper/counties',
+        'county',
+        null,
+        {
+            text : 'county_name',
+            id   :  'county_id'
+        }
+    );
+
+    $('#add-county-id').on('change',function(){
+        var countyId = $('#add-county-id').val();
+        App.Plugins.select2Handler(
+            '#add-city-id',
+            '',
+            '/helper/cities',
+            'city_name',
+            {
+                county_id : countyId
+            },
+            {
+                text : 'city_name',
+                id   : 'city_id'
+            }
+        );
+    });
 }
+
+function dateRangePicker()
+{
+    $('.date-range').daterangepicker({
+        language : 'ro'
+    });
+}
+
 function initTinyMce(){
     tinymce.init({
         selector: ".tiny-mce",
@@ -171,7 +151,7 @@ function initSweetAlert(){
  * Validation of new course add
  */
 //$.validate();
-//$('#new-course-add').validate({
+//jQuery('#new-course-add').validate({
 //    errorElement    : 'span',
 //    errorClass      : 'help-block',
 //    errorPlacement  : function(error, element){

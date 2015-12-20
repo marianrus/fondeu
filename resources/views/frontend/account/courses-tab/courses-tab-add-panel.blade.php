@@ -44,18 +44,9 @@
                                 <input class="form-control " name="price" placeholder="Pret">
                             </div>
 
-                            <div class="col-md-12">
-                                <h3>Derulare</h3>
-                                <hr>
-                            </div>
                             <div class="form-group col-lg-6">
-                                <label>Incepe</label>
-                                <input class="form-control date-picker" name="course_from" placeholder="Inceput">
-                            </div>
-
-                            <div class="form-group col-lg-6">
-                                <label>Se termina</label>
-                                <input class="form-control date-picker" name="course_to" placeholder="Se termina">
+                                <label>Dureaza</label>
+                                <input class="form-control date-range" name="course_to" placeholder="Durata">
                             </div>
 
                             <div class="row"></div>
@@ -65,19 +56,19 @@
                             </div>
                             <div class="form-group col-lg-6">
                                 <label>Judet</label>
-                                <input class="form-control county select-container" name="county_name">
+                                <input class="form-control county select-container" name="county_name" placeholder="Judet" id="add-county-id">
                             </div>
 
                             <div class="form-group col-lg-6">
                                 <label>Localitate</label>
-                                <input class="form-control city select-container" name="city_name" placeholder="Oras">
+                                <input class="form-control city select-container" name="city_name" id="add-city-id" placeholder="Oras">
                             </div>
 
                             <div class="divider_block">&nbsp;</div>
 
                             <div class="form-group">
                                 <label for="course_description-add-panel">Descriere</label>
-                                <textarea class="form-control tiny-mce" name="course_description"  rows="50"></textarea>
+                                <textarea class="form-control tiny-mce" name="course_description"  rows="20"></textarea>
                             </div>
                     </div>
                     <div class="col-lg-3">
