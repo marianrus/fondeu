@@ -22,7 +22,7 @@
                                     <input type="checkbox" name="remember" value="Remember Me">Tine-ma minte
                                 </label>
                             </div>
-                            <input type="submit" class="btn btn-lg btn-success btn-block" value="Intra">
+                            <input type="submit" class="btn btn-lg btn-success btn-block btn-login" value="Intra">
                         </fieldset>
                     </form>
                 </div>

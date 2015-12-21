@@ -7,7 +7,7 @@
                 <th class="hidden-xs">Incepe</th>
                 <th>Sfarseste</th>
                 <th class="hidden-xs">Status</th>
-                <th class="hidden-xs center">Actiuni</th>
+                <th class="hidden-xs center"></th>
             </tr>
             </thead>
             <tbody>

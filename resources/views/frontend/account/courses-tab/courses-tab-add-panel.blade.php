@@ -11,7 +11,7 @@
                             {!! csrf_field() !!}
                             <div class="col-md-12">
                                 <div class="errorHandler alert alert-danger no-display">
-                                    <i class="fa fa-times-sign"></i>Corectati erorile
+                                    <i class="fa fa-times-sign"></i>Aveti prea multe erori. Verificati erorile
                                 </div>
                                 <div class="successHandler alert alert-success no-display">
                                     <i class="fa fa-ok"></i> Validarea a fost facuta cu success!
@@ -56,12 +56,12 @@
                             </div>
                             <div class="form-group col-lg-6">
                                 <label>Judet</label>
-                                <input class="form-control county select-container" name="county_name" placeholder="Judet" id="add-county-id">
+                                <input class="form-control county select-container" name="county_id" placeholder="Judet" id="add-county-id">
                             </div>
 
                             <div class="form-group col-lg-6">
                                 <label>Localitate</label>
-                                <input class="form-control city select-container" name="city_name" id="add-city-id" placeholder="Oras">
+                                <input class="form-control city select-container" name="city_id" id="add-city-id" placeholder="Oras">
                             </div>
 
                             <div class="divider_block">&nbsp;</div>

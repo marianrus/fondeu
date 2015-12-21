@@ -6336,3 +6336,18 @@ span.input-help > input {
     border-color: #1ba593;
     color: #ffffff;
 }
+.btn-login{
+  background: #ED1C24 !important;
+  border-color: #ED1C24 !important;
+}
+.symbol.ok:before {
+    content: "\f00c";
+    display: inline;
+    font-family: FontAwesome;
+    color: #468847;
+}
+.symbol.required:before {
+    content: "*";
+    display: inline;
+    color: #E6674A;
+}

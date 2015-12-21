@@ -64,29 +64,30 @@
                             &nbsp;
                         </a>
                     </li>
-                </ul>
-
-                <ul class="login clearfix">
-                @if(Auth::check())
+                    @if(Auth::check())
                     <li class="dropdown">
                         <a href="autentificare/" class="dropdown-toggle user" data-toggle="dropdown">
                             <img src="images/people/guy-5.jpg" alt="Bill" class="img-circle" width="40" /> Bill <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="/cont">Profil</a></li>
+                            <li><a href="/cont">Cont</a></li>
                             <li><a href="user-private-messages.html">Messages</a></li>
                             <li><a href="/autentificare/logout">Iesire</a></li>
                         </ul>
                     </li>
 
-                @else
-                <li>
-                    <a href="/autentificare" class="account" title="account">
-                                Cont
-                    </a>
-                </li>
-                @endif
+                    @else
+                    <li>
+                        <a href="/autentificare" class="account" title="account">
+                            Cont
+                        </a>
+                    </li>
+                    @endif
                 </ul>
+
+<!--                <ul class="login clearfix">-->
+<!--                -->
+<!--                </ul>-->
                 <div class="latest_news_scrolling_list_container">
                     <ul>
                         <li class="category">LATEST</li>

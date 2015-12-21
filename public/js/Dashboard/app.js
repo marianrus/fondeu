@@ -131,6 +131,69 @@
 
         /**
          *
+         * @param element
+         * @param rulesToApply object
+         * @param messagesToRules object
+         */
+        validateForm : function(element, rulesToApply, messagesToRules){
+
+            $.validator.addMethod("dataRange", function () {
+                if ($("#dd").val() != "" && $("#mm").val() != "" && $("#yyyy").val() != "") {
+                    return true;
+                } else {
+                    return false;
+                }
+            }, 'Please select a day, month, and year');
+            var form = $(element);
+            var errorHandler   = $('.errorHandler', form);
+            var successHandler = $('.successHandler', form);
+
+            form.validate({
+                errorElement    : 'span',
+                errorClass      : 'help-block',
+                errorPlacement  : function(error, element){
+                    if(element.attr('type') == 'radio' || element.attr('type') =='checkbox'){
+                        error.insertAfter($(element).closest('.form-group').children('div').children().last());
+                    } else {
+                        error.insertAfter(element);
+                    }
+                },
+                ignore:"",
+                rules       : rulesToApply,
+                messages    : messagesToRules,
+                invalidHandler : function(event, validator){
+                    successHandler.hide();
+                    errorHandler.show();
+                },
+                highlight : function(element){
+                    $(element).closest('.help-block').removeClass('valid');
+                    $(element).closest('.form-group').removeClass('has-success').addClass('has-error').find('.symbol').removeClass('ok').addClass('required');
+//                    errorHandler.show();
+//                    successHandler.hide();
+                },
+                unhighlight : function(element){
+                    $(element).closest('.form-group').removeClass('has-error');
+//                    successHandler.show();
+//                    errorHandler.hide();
+                },
+                success : function(label, element){
+                    label.addClass('help-block valid');
+                    $(element).closest('.form-group').removeClass('has-error').addClass('has-success').find('.symbol').removeClass('required').addClass('ok');
+                },
+                submitHandler: function (form, event) {
+                    event.preventDefault();
+                    swal("Cursul a fost salvat", "", "success")
+                    successHandler.show();
+                    errorHandler.hide();
+                    setTimeout(function(){
+                        successHandler.hide();
+                    },1000)
+                }
+            });
+        },
+
+        /**
+         *
          * @param url
          * @param type
          * @param successCallback on success

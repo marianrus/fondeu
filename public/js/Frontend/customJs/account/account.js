@@ -5,7 +5,6 @@ $(document).ready(function(){
 //    initTinyMce();
     initDatePicker();
     initBootstrapSwitch();
-    initSweetAlert();
     handleButtonCourse();
     editTabCountyAndCity();
     addTabCountyAndCity();
@@ -13,6 +12,7 @@ $(document).ready(function(){
     dateRangePicker();
     initCitySelect2();
     handleDeleteCourse();
+    validateForm('#new-course-add');
 });
 
 
@@ -142,14 +142,6 @@ function initDatePicker(){
 function initBootstrapSwitch(){
     $('.make-switch').bootstrapSwitch();
 }
-function initSweetAlert(){
-    $("#successSweetAlert").on("click", function (e) {
-        swal("Cursul a fost salvat", "", "success")
-        e.preventDefault();
-    });
-
-
-}
 
 function handleEditCourse(){
 
@@ -221,4 +213,51 @@ function resetPanelStates()
             default : break;
         }
     });
+}
+function validateForm(element){
+
+      var  rules = {
+            course_name : {
+                minlength : 3,
+                required:true
+            },
+            category_course_id : {
+                required:true
+            },
+            price : {
+                required:true,
+                min     : 1,
+                digits : true
+            },
+            county_id : {
+                required:true
+            },
+            city_id   :{
+                required:true
+            },
+            course_description : {
+                required  : true,
+                minlength : 50
+            }
+        };
+     var messages = {
+            course_name : {
+                minlength : 'Va rog specificati numele cursului',
+                required  : 'Numele cursului este obligatoriu'
+            },
+            price : {
+                min       : 'Pretul trebuie sa fie minim 1',
+                required  : 'Pretul cursului este obligatoriu',
+                digits    : 'Pretul trebuie sa fie un numar pozitiv'
+            },
+            category_course_id : 'Categoria este obligatorie',
+            county_id : 'Judetul este obligatoriu',
+            city_id   : 'Orasul este obligatoriu',
+            course_description : {
+                required :  'Descrierea este obligatorie',
+                minlength :  'Descrierea trebuie sa aibe minim 50 carctere'
+            }
+        };
+
+    App.Helper.validateForm(element, rules, messages);
 }
