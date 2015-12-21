@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="{{ URL::asset('plugins/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css')}}" />
     <link rel="stylesheet" href="{{ URL::asset('plugins/bootstrap-social-buttons/bootstrap-social.css')}}" />
     <link rel="stylesheet" href="{{ URL::asset('plugins/sweetalert/lib/sweet-alert.css')}}" />
+    <link rel="stylesheet" href="{{ URL::asset('plugins/bootstrap-daterangepicker/daterangepicker-bs3.css')}}" />
     <link rel="shortcut icon" href="images/favicon.ico">
 <!--    <link media="all" type="text/css" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">-->
     <link media="all" type="text/css" rel="stylesheet" href="http://brick.a.ssl.fastly.net/Source+Sans+Pro:300,400,400i,600/Open+Sans:300,400,600,700">
@@ -63,29 +64,30 @@
                             &nbsp;
                         </a>
                     </li>
-                </ul>
-
-                <ul class="login clearfix">
-                @if(Auth::check())
+                    @if(Auth::check())
                     <li class="dropdown">
                         <a href="autentificare/" class="dropdown-toggle user" data-toggle="dropdown">
                             <img src="images/people/guy-5.jpg" alt="Bill" class="img-circle" width="40" /> Bill <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="/cont">Profil</a></li>
+                            <li><a href="/cont">Cont</a></li>
                             <li><a href="user-private-messages.html">Messages</a></li>
                             <li><a href="/autentificare/logout">Iesire</a></li>
                         </ul>
                     </li>
 
-                @else
-                <li>
-                    <a href="/autentificare" class="account" title="account">
-                                Cont
-                    </a>
-                </li>
-                @endif
+                    @else
+                    <li>
+                        <a href="/autentificare" class="account" title="account">
+                            Cont
+                        </a>
+                    </li>
+                    @endif
                 </ul>
+
+<!--                <ul class="login clearfix">-->
+<!--                -->
+<!--                </ul>-->
                 <div class="latest_news_scrolling_list_container">
                     <ul>
                         <li class="category">LATEST</li>

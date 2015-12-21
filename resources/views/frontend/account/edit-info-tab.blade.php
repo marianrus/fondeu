@@ -214,7 +214,7 @@
                     <label class="control-label">
                         Judet
                     </label>
-                    <input class="form-control county select-container" placeholder="Judet" type="text" name="count_id2">
+                    <input class="form-control county select-container popovers" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover" id="edit-county-id"  placeholder="Judet" type="text" name="count_id2">
                 </div>
             </div>
             <div class="col-md-8">
@@ -224,7 +224,7 @@
                     </label>
                     <input class="form-control tooltips city select-container" placeholder="Localitate" type="text"
                            data-original-title="We'll display it when you write reviews" data-rel="tooltip" title=""
-                           data-placement="top" name="city" id="city">
+                           data-placement="top" name="city" id="edit-city-id">
                 </div>
             </div>
             <div class="col-md-12">

@@ -262,11 +262,15 @@
         <script src="{{ URL::asset('js/Frontend/bootstrap-modal/js/bootstrap-modalmanager.js') }}"></script>
         <script src="{{ URL::asset('plugins/select2/select2.min.js') }}"></script>
         <script src="{{ URL::asset('plugins/tinymce/tinymce.min.js') }}"></script>
+<!--        <script src="{{ URL::asset('plugins/datepicker/js/locales/bootstrap-datepicker.ro.js') }}"></script>-->
         <script src="{{ URL::asset('plugins/datepicker/js/bootstrap-datepicker.js') }}"></script>
         <script src="{{ URL::asset('plugins/bootstrap-switch/dist/js/bootstrap-switch.min.js') }}"></script>
         <script src="{{ URL::asset('js/Frontend/customJs/account/account.js') }}"></script>
         <script src="{{ URL::asset('plugins/jquery-validation/dist/jquery.validate.min.js') }}"></script>
         <script src="{{ URL::asset('plugins/sweetalert/lib/sweet-alert.min.js') }}"></script>
+        <script src="{{ URL::asset('plugins/moment/min/moment.min.js') }}"></script>
+        <script src="{{ URL::asset('plugins/bootstrap-daterangepicker/daterangepicker.js') }}" charset="UTF-8"></script>
+        <script  src="{{ URL::asset('js/requireJS.js') }}"></script>
         <script>
             var config = <?php echo json_encode($config) ?>;
         </script>

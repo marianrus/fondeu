@@ -11,7 +11,7 @@
                             {!! csrf_field() !!}
                             <div class="col-md-12">
                                 <div class="errorHandler alert alert-danger no-display">
-                                    <i class="fa fa-times-sign"></i>Corectati erorile
+                                    <i class="fa fa-times-sign"></i>Aveti prea multe erori. Verificati erorile
                                 </div>
                                 <div class="successHandler alert alert-success no-display">
                                     <i class="fa fa-ok"></i> Validarea a fost facuta cu success!
@@ -31,7 +31,7 @@
 
                             <div class="form-group col-lg-6">
                                     <label>Categoria </label>
-                                    <select name="category_id" data-placeholder="Categoria"  class="form-control select2-select select-container">
+                                    <select name="category_course_id" data-placeholder="Categoria"  class="form-control select2-select select-container">
                                         <option></option>
                                         @foreach($categories as $cat)
                                              <option  value="{{$cat->category_course_id}}">{{$cat->category_course_name}}</option>
@@ -44,18 +44,9 @@
                                 <input class="form-control " name="price" placeholder="Pret">
                             </div>
 
-                            <div class="col-md-12">
-                                <h3>Derulare</h3>
-                                <hr>
-                            </div>
                             <div class="form-group col-lg-6">
-                                <label>Incepe</label>
-                                <input class="form-control date-picker" name="course_from" placeholder="Inceput">
-                            </div>
-
-                            <div class="form-group col-lg-6">
-                                <label>Se termina</label>
-                                <input class="form-control date-picker" name="course_to" placeholder="Se termina">
+                                <label>Dureaza</label>
+                                <input class="form-control date-range" name="course_to" placeholder="Durata">
                             </div>
 
                             <div class="row"></div>
@@ -65,19 +56,19 @@
                             </div>
                             <div class="form-group col-lg-6">
                                 <label>Judet</label>
-                                <input class="form-control county select-container" name="count_id">
+                                <input class="form-control county select-container" name="county_id" placeholder="Judet" id="add-county-id">
                             </div>
 
                             <div class="form-group col-lg-6">
                                 <label>Localitate</label>
-                                <input class="form-control city select-container" name="city_id" placeholder="Oras">
+                                <input class="form-control city select-container" name="city_id" id="add-city-id" placeholder="Oras">
                             </div>
 
                             <div class="divider_block">&nbsp;</div>
 
                             <div class="form-group">
                                 <label for="course_description-add-panel">Descriere</label>
-                                <textarea class="form-control tiny-mce" name="course_description"  rows="50"></textarea>
+                                <textarea class="form-control tiny-mce" name="course_description"  rows="20"></textarea>
                             </div>
                     </div>
                     <div class="col-lg-3">

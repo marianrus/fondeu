@@ -54,6 +54,8 @@ class Course extends Model
         return self::where('course_id', '=', $courseId)
             ->join('category_course','category_course.category_course_id', '=','courses.category_course_id')
             ->join('partner','partner.partner_id', '=','courses.partner_id')
+            ->join('city','city.city_id', '=','courses.city_id')
+            ->join('county','county.county_id', '=','courses.county_id')
             ->take(1)
             ->get();
     }

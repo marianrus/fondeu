@@ -57,10 +57,15 @@ class CoursesController extends Controller
      */
     public function show($id)
     {
-        $a = Course::getCourse($id);
+        $format  = $_GET['format'];
+        $courses = Course::getCourse($id);
+        if(isset($format) && $format =='json'){
+            return $courses;
+        }
+
         return view('frontend.courses.show',
             [
-                'course' => Course::getCourse($id)
+                'course' => $courses
             ]
         );
     }
@@ -96,7 +101,8 @@ class CoursesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Course::destroy($id);
+        return json_encode('success');
     }
     public function filterCourses(Request $request)
     {

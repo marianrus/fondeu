@@ -4651,8 +4651,12 @@ body.lock-position
     padding: 15px;
 }
 .tab-content>.tab-pane {
-    /*display: none;*/
-    /*visibility: hidden;*/
+    display: none;
+    visibility: hidden;
+}
+.tab-content>.active {
+    display: block;
+    visibility:visible;
 }
 .fade {
     opacity: 0;
@@ -4816,7 +4820,7 @@ table {
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
     border-top: 1px solid #dfe1e5;
 }
-.tabbable a {
+#panel_overview a {
     color: #88BBC8;
 }
 
@@ -6332,6 +6336,18 @@ span.input-help > input {
     border-color: #1ba593;
     color: #ffffff;
 }
-:not(.active .in) {
-    visibility: hidden;
+.btn-login{
+  background: #ED1C24 !important;
+  border-color: #ED1C24 !important;
+}
+.symbol.ok:before {
+    content: "\f00c";
+    display: inline;
+    font-family: FontAwesome;
+    color: #468847;
+}
+.symbol.required:before {
+    content: "*";
+    display: inline;
+    color: #E6674A;
 }
