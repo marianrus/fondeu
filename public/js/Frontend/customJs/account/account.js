@@ -13,6 +13,7 @@ $(document).ready(function(){
     initCitySelect2();
     handleDeleteCourse();
     validateForm('#new-course-add');
+    $(".currency").maskMoney();
 });
 
 
@@ -227,7 +228,7 @@ function validateForm(element){
             price : {
                 required:true,
                 min     : 1,
-                digits : true
+                decimal : true
             },
             county_id : {
                 required:true

@@ -270,6 +270,7 @@
         <script src="{{ URL::asset('plugins/sweetalert/lib/sweet-alert.min.js') }}"></script>
         <script src="{{ URL::asset('plugins/moment/min/moment.min.js') }}"></script>
         <script src="{{ URL::asset('plugins/bootstrap-daterangepicker/daterangepicker.js') }}" charset="UTF-8"></script>
+        <script src="{{ URL::asset('plugins/jquery-maskmoney/jquery.maskMoney.js') }}"></script>
         <script  src="{{ URL::asset('js/requireJS.js') }}"></script>
         <script>
             var config = <?php echo json_encode($config) ?>;

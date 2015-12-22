@@ -41,7 +41,7 @@
 
                             <div class="form-group col-lg-6">
                                 <label>Pret</label>
-                                <input class="form-control " name="price" placeholder="Pret">
+                                <input class="form-control currency" name="price" placeholder="Pret">
                             </div>
 
                             <div class="form-group col-lg-6">
